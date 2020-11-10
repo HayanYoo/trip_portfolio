@@ -58,7 +58,7 @@
 				<li class="nav-item"><a class="nav-link" href="qna_list">고객센터</a></li>
 				</c:when>
 				<c:otherwise>
-				<li class="nav-item"><a class="nav-link"> ${sessionScope.loginUser.name}(${sessionScope.loginUser.id}) </a></li>
+				<li class="nav-item"><a class="nav-link"> ${sessionScope.loginUser.name}님(${sessionScope.loginUser.user_id}) </a></li>
 				<li class="nav-item"><a class="nav-link" href="cart">장바구니&nbsp;&nbsp;&nbsp;</a></li>
 				<li class="nav-item"><a class="nav-link" href="mypage">마이페이지&nbsp;&nbsp;&nbsp;</a></li>
 				 <li class="nav-item"><a class="nav-link" href="logout">로그아웃</a></li>

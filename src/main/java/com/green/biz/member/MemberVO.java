@@ -13,5 +13,5 @@ public class MemberVO {
 	  private String phone;
 	  private  String email;
 	  private String  useyn;
-	  private Date   date;
+	  private Date   regdate;
 }
