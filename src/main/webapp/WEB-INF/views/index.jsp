@@ -72,34 +72,23 @@
 
 
 
-<h3 class="popular text-center">인기 장소</h3>
+<h4 class="popular text-center">Popular</h4>
 
-<div class="row">
-	<div class="col-md-4">
-		<h4>코딩 부스터의 특징</h4>
-		<p>코딩부스터는 다른사이트와 차원이 다른 깔끔한 구성을 보여줍니다. 모든 페이지가 사용자가 접근하고 읽기 쉽도록
-			구성되어 있습니다.</p>
-		<p>
-			<a class="btn btn-default" href="#">자세히 알아보기</a>
-		</p>
-	</div>
-	<div class="col-md-4">
-		<h4>코딩 부스터의 특징</h4>
-		<p>코딩부스터는 다른사이트와 차원이 다른 깔끔한 구성을 보여줍니다. 모든 페이지가 사용자가 접근하고 읽기 쉽도록
-			구성되어 있습니다.</p>
-		<p>
-			<a class="btn btn-default" href="#">자세히 알아보기</a>
-		</p>
-	</div>
-	<div class="col-md-4">
-		<h4>코딩 부스터의 특징</h4>
-		<p>코딩부스터는 다른사이트와 차원이 다른 깔끔한 구성을 보여줍니다. 모든 페이지가 사용자가 접근하고 읽기 쉽도록
-			구성되어 있습니다.</p>
-		<p>
-			<a class="btn btn-default" href="#">자세히 알아보기</a>
-		</p>
-	</div>
+	
+<div class="container features">
+    <div class="row" style="height: 100px;">
+    <c:forEach items="${bestProductList}" var="productVO">
+        <div class="col-lg-4 col-md-4 col-sm-12 row-lg-4">
+            <a href="product_detail?pseq=${productVO.pseq}">
+            <img src="product_images/${productVO.image}" class="img-fluid features-img" >
+            <h3 class="feature-title text-center">${productVO.name}</h3>
+            <p class="text-center">~${productVO.aprice}원</p>
+        	</a> 
+        </div>  
+    </c:forEach>      
+    </div>
 </div>
+	
 <br><br>
 
 <%@ include file="footer.jsp"%>

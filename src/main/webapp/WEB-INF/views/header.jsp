@@ -13,8 +13,10 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
 	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 	crossorigin="anonymous">
-
+	
+<link rel="stylesheet" href="css/main2.css">
 <link rel="stylesheet" href="css/style.css">
+
 <title>Trip</title>
 </head>
 <body>
@@ -51,14 +53,14 @@
 				
 				 <c:choose>
       			 <c:when test="${empty sessionScope.loginUser}">
-				<li class="nav-item"><a class="nav-link" href="#">로그인&nbsp;&nbsp;&nbsp; </a></li>
-				<li class="nav-item"><a class="nav-link" href="#">회원가입&nbsp;&nbsp;&nbsp;</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">고객센터</a></li>
+				<li class="nav-item"><a class="nav-link" href="login_form">로그인&nbsp;&nbsp;&nbsp; </a></li>
+				<li class="nav-item"><a class="nav-link" href="contract">회원가입&nbsp;&nbsp;&nbsp;</a></li>
+				<li class="nav-item"><a class="nav-link" href="qna_list">고객센터</a></li>
 				</c:when>
 				<c:otherwise>
 				<li class="nav-item"><a class="nav-link"> ${sessionScope.loginUser.name}(${sessionScope.loginUser.id}) </a></li>
-				<li class="nav-item"><a class="nav-link" href="#">장바구니&nbsp;&nbsp;&nbsp;</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">마이페이지&nbsp;&nbsp;&nbsp;</a></li>
+				<li class="nav-item"><a class="nav-link" href="cart">장바구니&nbsp;&nbsp;&nbsp;</a></li>
+				<li class="nav-item"><a class="nav-link" href="mypage">마이페이지&nbsp;&nbsp;&nbsp;</a></li>
 				 <li class="nav-item"><a class="nav-link" href="logout">로그아웃</a></li>
 				</c:otherwise>
 				</c:choose>

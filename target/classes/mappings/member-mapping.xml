@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="MemberDAO">
+	<!-- 로그인시 사용 -->
+	<select id = "getMember" resultType="member">
+	<![CDATA[
+	SELECT * FROM member
+	where user_id = #{user_id} and pwd = #{pwd}
+	]]>
+	</select>
+	
+	<!-- 사용자 존재 여부 조회 -->
+	<select id="findMember" parameterType="String" resultType="member">
+	<![CDATA[
+	SELECT * FROM member
+	where user_id = #{user_id}
+	]]>
+	</select>
+	
+	<insert id="insertMember">
+	<![CDATA[
+	INSERT INTO MEMBER
+	(user_id, pwd, name, birth, email, phone)
+	values(#{user_id}, #{pwd}, #{name}, #{birth}, #{email}, #{phone})
+	]]>
+	</insert>
+	
+	<select id = "getMemberList" resultType="member">
+	<![CDATA[
+	select * from member
+	]]>
+	</select>
+	
+	<!-- 사용자 이름과 이메일을 이용한 아이디 찾기 -->
+	<select id="getMemberByNameAndEmail" resultType="member">
+	select * from member
+	where name = #{name} and email = #{email}
+	</select>
+	
+	<!-- 사용자 아이디와 이름과 이메일을 이용한 비밀번호 찾기 -->
+	<select id="getMemberByIdAndNameAndEmail" resultType="member">
+	select * from member
+	where user_id = #{user_id} and name = #{name} and email = #{email}
+	</select>
+	
+	<update id="changePassword">
+	update member set pwd = #{pwd}
+	where user_id = #{user_id}
+	</update>
+	
+	<select id="listMember" resultType="member">
+	select * from member where name like '%' || #{key} || '%'
+	order by regdate desc
+	</select>
+	
+
+</mapper>
+

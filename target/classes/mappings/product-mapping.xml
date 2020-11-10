@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ProductDAO">
+
+	<select id = "getBestProductList" resultType="product">
+	<![CDATA[
+	SELECT * FROM product
+	where bestyn = 'y'
+	and rownum < 4
+	]]>
+	</select>
+	
+	<select id = "getProduct" resultType="product">
+	<![CDATA[
+	select * from product
+	where pseq = #{pseq}
+	]]>
+	</select>
+	
+	<select id = "getProductListByKind" resultType="product">
+	<![CDATA[
+	select * from product
+	where kind = #{kind}
+	order by name
+	]]>
+	</select>
+	
+	<select id="countProductList" resultType="int">
+		select count(*) from product where name like '%' ||#{name}|| '%'
+	</select>
+	
+	<!-- 상품명을 조건으로 하는 검색목록 또는 상품의 전체 목록  -->
+	<select id="listProduct" resultType="product">
+		select *
+		from product where name like '%' || #{name} || '%'
+		order by name asc
+	</select>
+	
+	<!-- 페이지별 상품 목록 검색 -->
+	<select id="listWithPaging" parameterType="hashMap" resultType="product">
+	<![CDATA[
+		select	pseq, name, kind, aprice, kprice, image, useyn, bestyn, regdate, parea, sarea, address
+			from
+				(select rn, pseq, name, kind, aprice, kprice, image, useyn, bestyn, regdate, parea, sarea, address
+					from
+						(select row_number() over (order by name) rn, pseq, name, kind, aprice, kprice, image, useyn, bestyn, regdate, parea, sarea, address
+							from product 
+							where name like '%' || #{name} || '%'
+							order by name
+						)
+					Where rn <= #{criteria.pageNum} * #{criteria.numPerPage}	
+				)
+			where rn > (#{criteria.pageNum} -1) * #{criteria.numPerPage}
+	]]>
+	</select>
+	
+	<!--  상품 등록  -->
+	<insert id="insertProduct">
+		insert into product(pseq, name, kind, aprice, kprice, image, parea, sarea, address)
+		values(pseq_seq.nextval, #{name}, #{kind}, #{aprice}, #{kprice}, #{image}, #{parea}, #{sarea}, #{address})
+	</insert>
+	
+	<!-- 상품 정보 수정  -->
+	<update id="updateProduct">
+		update product set kind=#{kind}, useyn = #{useyn}, name = #{name}, aprice = #{aprice},
+		kprice = #{kprice}, parea = #{parea}, sarea = #{sarea}, address = #{address}, image = #{image}, bestyn = #{bestyn}
+		where pseq = #{pseq}
+	</update>
+	
+	
+</mapper>
+

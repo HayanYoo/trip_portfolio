@@ -7,7 +7,7 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-		<context:component-scan base-package="com.green.view.controller"></context:component-scan>
+		<context:component-scan base-package="com.green.biz"></context:component-scan>
 		
 		<mvc:annotation-driven></mvc:annotation-driven>
 		
@@ -22,7 +22,7 @@
 		</bean>
 		
 		
-		<!-- 
+		 
 		 <bean id = "sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 			<property name="dataSource" ref="dataSource"></property>
 			<property name="configLocation" value="classpath:sql-map-config.xml"></property>
@@ -30,6 +30,5 @@
 		<bean class="org.mybatis.spring.SqlSessionTemplate">
 			<constructor-arg ref="sessionFactory"></constructor-arg>
 		</bean>
-		 -->
-		 
+	
 </beans>
