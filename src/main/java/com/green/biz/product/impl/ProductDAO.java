@@ -17,4 +17,12 @@ public class ProductDAO  {
 	public List<ProductVO> getBestProductList() {
 		return mybatis.selectList("ProductDAO.getBestProductList");
 	}
+	
+	public ProductVO getProduct(ProductVO vo) {
+		return mybatis.selectOne("ProductDAO.getProduct", vo);
+	}
+	
+	public List<ProductVO> listProduct(String name){
+		return mybatis.selectList("ProductDAO.listProduct", name);
+	}
 }

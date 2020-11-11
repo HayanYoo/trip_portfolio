@@ -1,5 +1,6 @@
 package com.green.biz.member.impl;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +25,7 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public void insertMember(MemberVO vo) {
+	
 		member.insertMember(vo);
 	}
 

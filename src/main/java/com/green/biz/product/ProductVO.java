@@ -15,5 +15,9 @@ public class ProductVO {
 	private String useyn;
 	private String bestyn;
 	private Date regdate;
+	private String parea;
+	private String sarea;
+	private String address;
+	private String des;
 
 }

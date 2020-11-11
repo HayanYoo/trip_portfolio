@@ -16,13 +16,14 @@
 	
 <link rel="stylesheet" href="css/main2.css">
 <link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/member.js"></script>
 
 <title>Trip</title>
 </head>
 <body>
+<div class="nav-container">
 	<nav class=" navbar navbar-expand-lg navbar-light navbar-default">
-
-		<a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+		<a class="navbar-brand" href="index" ><img src="images/logo.png"     style="padding-left: 100px;"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -30,9 +31,9 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<div class="collapse navbar-collapse " id="navbarSupportedContent" >
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
+				<li class="nav-item active"><a class="nav-link" href="index">Home
 						<span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
@@ -47,7 +48,7 @@
 						<a class="dropdown-item" href="#">Something else here</a>
 					</div></li>
 				<li class="nav-item"><a class="nav-link disabled disabled_cor"
-					href="#" tabindex="-1" aria-disabled="true" style="color: white;">DisabledAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</a>
+					href="#" tabindex="-1" aria-disabled="true" style="color: white;">DisabledAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</a>
 				</li>
 
 				
@@ -65,10 +66,9 @@
 				</c:otherwise>
 				</c:choose>
 			</ul>
-
 		</div>
 	</nav>
-
+</div>
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

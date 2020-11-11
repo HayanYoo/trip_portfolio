@@ -4,6 +4,9 @@ import java.util.List;
 
 public interface ProductService {
 
-	List<ProductVO> getBestProductList();
+	public List<ProductVO> getBestProductList();
 
+	public ProductVO getProduct(ProductVO vo);
+	
+	public List<ProductVO> listProduct(String name);
 }

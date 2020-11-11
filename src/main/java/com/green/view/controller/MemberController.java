@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.green.biz.member.MemberService;
@@ -42,5 +43,34 @@ public class MemberController {
 		return "member/contract";
 	}
 	
+	@RequestMapping(value="join_form")
+	public String joinFormView() {
+		return "member/join_form";
+	}
 	
+	@RequestMapping(value="id_check_form")
+	public String idCheckFormView(@RequestParam(value="user_id") String user_id, Model model) {
+		model.addAttribute("user_id", user_id);
+		return "member/id_check_form";
+	}
+	
+	@RequestMapping(value="id_check_form", method=RequestMethod.POST)
+	public String idCheckAction(MemberVO vo, Model model) {
+		MemberVO user = memberService.findMember(vo);
+		if (user != null) {
+			model.addAttribute("message", 1);
+			model.addAttribute("user_id", vo.getUser_id());
+		} else {
+			model.addAttribute("message", -1);
+			model.addAttribute("user_id", vo.getUser_id());
+		}
+		
+		return "member/id_check_form";
+	}
+	
+	@RequestMapping(value="join")
+	public String joinAction(MemberVO vo) {
+		memberService.insertMember(vo);
+		return "redirect:/index";
+	}
 }

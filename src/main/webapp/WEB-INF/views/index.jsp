@@ -54,16 +54,16 @@
 </div>
 <div class="select col-md-6">
 	<p>
-	<input id = "rcorners1" type="text" placeholder="어디로 떠나세요?"><br>
-	<input id = "rcorners" type="date" required aria-required="true" data-placeholder="여행시작">
-	<input id = "rcorners" type="date" required aria-required="true" data-placeholder="여행종료"><br>
-	<input id = "rcorners" type="text" placeholder="대인">
-	<input id = "rcorners" type="text" placeholder="소인"><br>
-	<input id = "rcorners" type="text" placeholder="최소 예산">
-	<input id = "rcorners" type="text" placeholder="최대 예산"><br>
-	<input id = "rcorners" type="text" placeholder="최소 여행 옵션 수">
-	<input id = "rcorners" type="text" placeholder="최대 여행 옵션 수"><br><br>
-		<a id = "rcorners2" href="#" role="button">특정옵션추가</a>
+	<input id = "rcorners1" type="text" name="area" placeholder="어디로 떠나세요?" ><br>
+	<input id = "rcorners" type="date" name="startdate" required aria-required="true" data-placeholder="여행시작" >
+	<input id = "rcorners" type="date" name="enddate" required aria-required="true" data-placeholder="여행종료"><br>
+	<input id = "rcorners" type="text" name="adult" placeholder="대인">
+	<input id = "rcorners" type="text" name="kid" placeholder="소인"><br>
+	<input id = "rcorners" type="text" name="minbudget" placeholder="최소 예산">
+	<input id = "rcorners" type="text" name="maxbudget" placeholder="최대 예산"><br>
+	<input id = "rcorners" type="text" name="minpotion" placeholder="최소 여행 옵션 수">
+	<input id = "rcorners" type="text" name="maxoption" placeholder="최대 여행 옵션 수"><br><br>
+		<a id = "rcorners2" href="product_list" role="button">특정옵션추가</a>
 	</p>
 	<button class="search_btn btn btn-primary text-center" type="submit">검색</button>
 	

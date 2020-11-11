@@ -19,6 +19,8 @@
 	text-decoration: none;
 }
 
+
+
 .disabled_cor{
 	color: white;
 }
@@ -167,5 +169,136 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	display : block;
 	margin : 0 auto;
 	width: 700px;
+	font-size: 15px;
+}
+.join-title{
+	text-align : center;
+	display : block;
+	margin : 0 auto;
+	width: 800px;
+	font-size: 45px;
+	font-weight: bold;
+}
+
+.join-form {
+	text-align : left;
+	display : block;
+	margin : 0 auto;
+	width: 800px;
+	font-size: 15px;
+}
+
+.join-form input {
+	margin : 8px 0;
+}
+
+.join-form #buttons {
+	text-align : center;
+}
+
+.detail-center {
+	text-align : left;
+	display : block;
+	margin : 0 auto;
+	width : 1100px;
+	font-size: 15px;
+}
+
+.detail-center img {
+	height: 400px;
+}
+.detail-center h3{
+	font-weight: 600;
+}
+
+.detail-center span{
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.detail-center .login-btn{
+	width : 80px;
+}
+.address {
+	font-size: 13px;
+	font-weight: 500;
+}
+
+}
+.parea {
+	color : gray;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+
+
+
+
+#sub_menu {
+	width: 250x;
+	float: left;
+	margin: 20px 0;
+}
+
+#sub_menu ul {
+	margin: 20px 0 0 16px;
+	list-style: none;
+}
+
+#sub_menu a {
+	text-decoration: none;
+	color: black; font-family: Arial, Helvetica, sans-serif;
+	font-weight:bold; font-size:16px;
+	display: block;
+	height: 15px;
+	width: 160px;
+	padding: 7px;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+#sub_menu a:hover {
+	background-repeat: no-repeat; 
+	background-position: right center;
+	color: #F90;font-weight:bold; font-size:16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#sub_menu #rcorners, #sub_menu #rcorners1 {
+	border-radius: 2px;
+	background: white;
+	border: 1px solid #ff8080;
+	padding: 15px 0;
+	width: 70px;
+	height: 30px;
+	color: #ff8080;
+	text-align: center;
+	margin: 2px;
+	font-size: 13px;
+}
+
+#sub_menu #rcorners1,#sub_menu #rcorners2 {
+	border-radius: 2px;
+	text-align: center;
+	font-size: 13px;
+	height: 33px;
+	width: 150px;
+    margin-top: 2px;
+    border: 1px solid #ff8080;
+	
+}
+
+#sub_menu .search_btn {
+	background-color: #ff8080;
+	border: 1px solid #ff8080;
+}
+
+.product-center {
+	text-align : center;
+	display : block;
+	margin : 0 auto;
+	width : 1100px;
 	font-size: 15px;
 }

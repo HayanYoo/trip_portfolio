@@ -3,7 +3,7 @@
 <%@ include file="../header.jsp"%>
 
 <br><br>
-<h1 class="text-center">Login</h1><br><br>
+<h3 class="text-center">Login</h3><br><br>
     <form method="post" action="login" name = "formm">
     
       <div class="login">  			         
@@ -13,7 +13,7 @@
 		      
 			        <div id="buttons">
 			            <input type="submit" value="로그인" class="submit btn btn-danger login-btn" style="margin-bottom: 10px;"><br>
-			            <a href="#" style="margin: 10px 35px;">회원가입</a>
+			            <a href="contract" style="margin: 10px 35px;">회원가입</a>
 			            <a href="#">아이디/비밀번호 찾기</a>			      
 			        </div>        
         </div>

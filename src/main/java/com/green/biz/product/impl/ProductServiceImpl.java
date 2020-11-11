@@ -17,4 +17,14 @@ public class ProductServiceImpl implements ProductService {
 		return product.getBestProductList();
 	}
 
+	@Override
+	public ProductVO getProduct(ProductVO vo) {	
+		return product.getProduct(vo);
+	}
+
+	@Override
+	public List<ProductVO> listProduct(String name) {
+		return product.listProduct(name);
+	}
+
 }

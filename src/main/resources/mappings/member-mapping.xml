@@ -23,7 +23,7 @@
 	<![CDATA[
 	INSERT INTO MEMBER
 	(user_id, pwd, name, birth, email, phone)
-	values(#{user_id}, #{pwd}, #{name}, #{birth}, #{email}, #{phone})
+	values(#{user_id}, #{pwd}, #{name}, to_date(#{birth}, 'yyyy-MM-dd'), #{email}, #{phone})
 	]]>
 	</insert>
 	
