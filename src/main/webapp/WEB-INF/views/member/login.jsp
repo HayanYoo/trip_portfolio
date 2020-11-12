@@ -12,9 +12,9 @@
 		                <p style="color: red;" class="text-center">${message}</p>
 		      
 			        <div id="buttons">
-			            <input type="submit" value="로그인" class="submit btn btn-danger login-btn" style="margin-bottom: 10px;"><br>
+			            <input type="submit" value="로그인" class="submit btn btn-danger login-btn" style="margin-bottom: 10px;" ><br>
 			            <a href="contract" style="margin: 10px 35px;">회원가입</a>
-			            <a href="#">아이디/비밀번호 찾기</a>			      
+			            <a href="find_id_pwd">아이디/비밀번호 찾기</a>			      
 			        </div>        
         </div>
     </form>  

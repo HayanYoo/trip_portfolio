@@ -29,4 +29,19 @@ public class MemberServiceImpl implements MemberService {
 		member.insertMember(vo);
 	}
 
+	@Override
+	public MemberVO getMemberByNameAndEmail(MemberVO vo) {
+		return member.getMemberByNameAndEmail(vo);
+	}
+
+	@Override
+	public MemberVO getMemberByIdAndNameAndEmail(MemberVO vo) {
+		return member.getMemberByIdAndNameAndEmail(vo);
+	}
+
+	@Override
+	public void changePassword(MemberVO vo) {
+		member.changePassword(vo);
+	}
+
 }

@@ -9,7 +9,7 @@
 <form name="frm" method="post">
 <table>
   <tr>
-  <td width="700" style="text-align : right; border-right: 1px solid gray;">
+  <td width="750" style="text-align : right; border-right: 1px solid gray;">
      <input type="text" name="key" placeholder="검색어를 입력해주세요" size="40">
      <input class="btn" type="button" name="btn_search" value="검색" onClick="go_search()"></td>
   <td><input class="btn" type="button" name="btn_total" value="전체보기 " onClick="go_total()">
@@ -19,4 +19,40 @@
 <br><hr style="width:1000px;">
 </form>
 </div>
+
+<div class="panel-center" >
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<br><br>
+		</div>	
+ 		<c:forEach items="${productList}" var="product">
+	 		<a href="product_detail?pseq=${product.pseq}">
+				<div class="panel-body">
+					<div class="media" style="box-shadow: 0px 0px 7px 1px #cacccb; ">
+						<div class="media-left" style="width: 200px; height: 180px;">
+							<img class="media-object img-fluid" src="product_images/${product.image}" alt="${product.name}" >
+						</div>
+						<div class="media-body" style="text-align: left; padding-left: 40px;" >
+							<h5 class="media-heading"><br><br><br>[${product.name}]&nbsp;<span class="badge">New</span></h5>				
+						</div>
+						<div class="media-right" style="width: 233px;">
+						 	<c:choose>
+								<c:when test="${product.aprice == 0}">
+									<p>무료</p>
+								</c:when>
+								<c:otherwise>
+									<p>${product.aprice}원</p>
+								</c:otherwise>
+							</c:choose>
+						</div>
+					</div>					
+				</div>
+			</a>
+			<br>
+		</c:forEach>
+		
+	</div>
+</div>
+
+<br>
 <%@ include file ="../footer.jsp" %>

@@ -23,5 +23,17 @@ public class MemberDAO {
 		mybatis.insert("MemberDAO.insertMember", vo);
 	}
 	
+	public MemberVO getMemberByNameAndEmail(MemberVO vo) {
+		return mybatis.selectOne("MemberDAO.getMemberByNameAndEmail", vo);
+	}
+	
+	public MemberVO getMemberByIdAndNameAndEmail(MemberVO vo) {
+		return mybatis.selectOne("MemberDAO.getMemberByIdAndNameAndEmail", vo);
+	}
+	
+	public void changePassword(MemberVO vo) {
+		mybatis.update("MemberDAO.changePassword",vo);
+	}
+	
 	
 }

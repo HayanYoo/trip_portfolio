@@ -28,8 +28,8 @@
                  </div>
                 <div class="col-lg-4 col-sm-12">
                     <h6 class="text-uppercase font-weight-blod">Contact</h6>
-                    <p>서울시 강남구 역삼동 1681-15
-                        <br>info@email.com
+                    <p>서울특별시 강남구 역삼동 1681-15 삼성빌딩 3층
+                        <br>travel_info@travel.com
                         <br>+ 082 234 5678
                         <br>+ 082 234 5678
                     </p>

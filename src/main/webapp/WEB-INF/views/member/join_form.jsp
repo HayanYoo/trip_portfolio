@@ -10,6 +10,8 @@
    <div class="join-form"> 
         <h4>회원정보</h4><br>
         <hr><Br>
+         <label class="col-2">이름</label>
+        <input type="text"      name="name" size="10"><br> 
         <label class="col-2">아이디</label>
         <input type="text"      name="user_id">
         <input type="hidden"    name="reid">
@@ -18,8 +20,6 @@
         <input type="password"  name="pwd"><br> 
         <label class="col-2">비밀번호 확인</label>
         <input type="password"  name="pwdCheck"><br>
-        <label class="col-2">이름</label>
-        <input type="text"      name="name" size="10"><br> 
         <label class="col-2">생일</label>
         <input type="date"      name="birth"><br>
         <label class="col-2">전화번호</label> 

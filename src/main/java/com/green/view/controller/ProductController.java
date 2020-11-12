@@ -7,11 +7,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.green.biz.condition.ConditionVO;
 import com.green.biz.product.ProductService;
 import com.green.biz.product.ProductVO;
 
 @Controller
+
 public class ProductController {
 	@Autowired
 	private ProductService productService;
@@ -24,9 +27,12 @@ public class ProductController {
 	}
 	
 	@RequestMapping(value="product_list")
-	public String productListView(@RequestParam(value="key", defaultValue="", required=false) String key, Model model) {
+	public String productListView(@RequestParam(value="key", defaultValue="", required=false) String key, ConditionVO vo, Model model) {
 		List<ProductVO> productList = productService.listProduct(key);
+		model.addAttribute("condition" ,vo);
 		model.addAttribute("productList", productList);
 		return "product/product_list";
 	}
+	
+	
 }

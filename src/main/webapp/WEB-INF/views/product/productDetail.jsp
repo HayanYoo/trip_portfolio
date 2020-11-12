@@ -11,11 +11,19 @@
 			<img src="product_images/${product.image}"  class='img-fluid' >
 		</div>
 		<div class="col-5 row-lg-4">
-			<h5 class="parea" >${product.parea}</h5>
-			<h3>[${product.name}]</h3>
-			<p><span style="color : #ff4a52;">성인 ${product.aprice}, 아동  ${product.kprice }</span></p>
+			<span class="parea">${product.parea}</span>
+			<h4>[${product.name}]</h4>
+			<c:choose>
+				<c:when test="${product.aprice == 0 && product.kprice ==0}">
+					<p><span class="price" style="color : #ff4a52;">무료</span></p>
+				</c:when>
+				<c:otherwise>
+					<p><span class="price" style="color : #ff4a52;">성인 ${product.aprice}, 아동  ${product.kprice }</span></p>
+				</c:otherwise>
+				
+			</c:choose>
 			<p class="address">${product.address}</p>
-			<br><br>
+			<br><br><br><br>
 		
 			<p>${product.des}</p><br>
 			 <input type="submit" value="담기" class="submit btn btn-danger login-btn" style="margin-right: 5px;">
