@@ -30,10 +30,10 @@
 			<img class="d-block w-100" src="images/lee.jpg" alt="First slide">
 		</div>
 		<div class="carousel-item">
-			<img class="d-block w-100" src="images/horse.jpg" alt="Second slide">
+			<img class="d-block w-100" src="images/seoultower.jpg" alt="Second slide">
 		</div>
 		<div class="carousel-item">
-			<img class="d-block w-100" src="images/playaqa.jpg" alt="Third slide">
+			<img class="d-block w-100" src="images/sk.jpg" alt="Third slide">
 		</div>
 	</div>
 	<a class="carousel-control-prev" href="#carouselExampleIndicators"

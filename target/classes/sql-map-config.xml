@@ -8,12 +8,14 @@
 	<typeAliases>
 		<typeAlias type="com.green.biz.product.ProductVO" alias="product" />
 		<typeAlias type="com.green.biz.member.MemberVO" alias="member" />
+		<typeAlias type="com.green.biz.qna.QnaVO" alias="qna"/>
 	</typeAliases>
 
 
 	<mappers>
 		<mapper resource="mappings/product-mapping.xml" />
 		<mapper resource="mappings/member-mapping.xml" />
+		<mapper resource="mappings/qna-mapping.xml"/>
 	</mappers>
 
 </configuration>

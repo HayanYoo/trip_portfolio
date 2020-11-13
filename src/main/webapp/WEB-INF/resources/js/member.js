@@ -137,3 +137,26 @@ function change_pwd() {
 }
 
 
+function insert_qna() {
+	if(document.frm.subject.value ==""){
+		alret("제목을 입력해주세요!");
+		document.frm.subject.focus();
+	} else if(document.frm.content.value ==""){
+		alret("내용을 입력해주세요!");
+		document.frm.content.focus();
+	} else {
+		document.frm.action="insert_qna";
+		document.frm.submit();
+	}
+}
+
+
+function delete_qna() {
+	result = confirm("삭제하시겠습니까?");
+	
+	if (result){
+		document.frm.action ="delete_qna";
+		document.frm.submit();
+	} 
+}
+

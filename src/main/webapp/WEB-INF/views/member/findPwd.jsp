@@ -8,7 +8,7 @@
 <h4 class="text-center">비밀번호  찾기 결과</h4><br>
     <form method="post" name = "formm" > 
       <div class="login">  	
-      	<c:choose>	
+      	<c:choose>		
       		<c:when test="${message == 1}">	
       		<div class="login">
       			<p>비밀번호 변경</p>  

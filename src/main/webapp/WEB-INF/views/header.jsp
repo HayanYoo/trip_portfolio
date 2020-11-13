@@ -37,10 +37,8 @@
 						<span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item"><a class="nav-link" href="product_list">Activity</a></li>
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> Dropdown </a>
+				<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="#">Action</a> <a
 							class="dropdown-item" href="#">Another action</a>
@@ -59,9 +57,16 @@
 				<li class="nav-item"><a class="nav-link" href="qna_list">고객센터</a></li>
 				</c:when>
 				<c:otherwise>
-				<li class="nav-item"><a class="nav-link"> ${sessionScope.loginUser.name}님(${sessionScope.loginUser.user_id}) </a></li>
-				<li class="nav-item"><a class="nav-link" href="cart">장바구니&nbsp;&nbsp;&nbsp;</a></li>
-				<li class="nav-item"><a class="nav-link" href="mypage">마이페이지&nbsp;&nbsp;&nbsp;</a></li>
+				<li class="nav-item"><a class="nav-link"> ${sessionScope.loginUser.name}님(${sessionScope.loginUser.user_id}) </a></li>					
+				<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
+				aria-haspopup="true" aria-expanded="false"> MyPage&nbsp; </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="mypage">회원정보</a>
+						<a class="dropdown-item" href="cart">저장된 일정</a>
+						<a class="dropdown-item" href="withdraw">회원탈퇴</a>    
+					</div></li>
+				<li class="nav-item"><a class="nav-link" href="qna_list">Q&A&nbsp;&nbsp;&nbsp;</a></li>
 				 <li class="nav-item"><a class="nav-link" href="logout">로그아웃</a></li>
 				</c:otherwise>
 				</c:choose>

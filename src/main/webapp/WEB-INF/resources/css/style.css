@@ -354,3 +354,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .find input{
 	margin: 0px;
 }	
+
+.qna-center {
+	text-align : center;
+	display : block;
+	margin : 0 auto;
+	width : 900px;
+	font-size: 15px;
+}
+
+.mypage-left{
+	text-align : left;
+	display : block;
+	margin : 0 auto;
+	width : 700px;
+	font-size: 15px;
+}
