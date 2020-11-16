@@ -8,8 +8,6 @@
 
     <form method="post" name = "formm" > 
       <div class="login">  	
-      	<c:choose>		
-      		<c:when test="${message == 1}">	
       		<h4 class="text-center">비밀번호  변경</h4><br><br>
       		<div class="login"> 
       			<input type="hidden" name="user_id" value="${member.user_id}"/>			         
@@ -19,18 +17,6 @@
 	        <div id="buttons" class="text-center">
 	            <input type="button" value="비밀번호 변경" class="submit btn btn-danger login-btn w-50" style="margin-bottom: 10px;" onclick="change_pwd()"/><br>			            			      
 	        </div>  
-	        </c:when>
-	        
-	        <c:otherwise>
-	        <h4 class="text-center">비밀번호  찾기</h4><br>
-	        <div class="text-center">  
-	        	입력하신 정보는 존재하지 않습니다.<br><br><br> 
-			</div>	    	
-	        <div id="buttons" class="text-center">
-	            <a href="find_id_pwd"><input type="button" value="다시 찾기" class="submit btn btn-danger login-btn w-50" style="margin-bottom: 10px;"/></a><br>			            			      
-	        </div> 
-	        </c:otherwise> 
-        </c:choose>     
       </div>
     </form>  
 </div>      

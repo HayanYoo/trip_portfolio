@@ -20,7 +20,7 @@
     
  <br><br>
 <h4 class="text-center">비밀번호 찾기</h4><br>  
-   <form method="post" action="find_pwd" name = "findPwd">
+   <form method="post" action="find_pwd" name = "theForm">
       <div class="login">  
 			<input type="text" class="form-control" placeholder="아이디" name="user_id"/><br>  				         
 	        <input type="text" class="form-control" placeholder="이름" name="name"/><br>		             

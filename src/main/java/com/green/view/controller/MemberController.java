@@ -1,5 +1,7 @@
 package com.green.view.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -129,7 +131,51 @@ public class MemberController {
 	
 	
 	@RequestMapping(value="mypage")
-	public String mypageView() {
-		return "mypage/index";
+	public String mypageView(HttpSession session, Model model) {
+		MemberVO member = (MemberVO)session.getAttribute("loginUser");
+		
+		member.setBirth(member.getBirth().substring(0, 10));
+		model.addAttribute("member", member);
+		
+		return "mypage/mypageForm";
+	}
+	
+	@RequestMapping("withdraw")
+	public String withdraw(HttpSession session, SessionStatus status) {
+		MemberVO vo = (MemberVO)session.getAttribute("loginUser");
+		memberService.updateMemberUseyn(vo);
+		
+		status.setComplete();
+		
+		return "mypage/successWithdraw";
+	}
+	
+	@RequestMapping("change_inform")
+	public String changeInformView(HttpSession session, Model model) {
+		MemberVO member = (MemberVO)session.getAttribute("loginUser");
+		member.setBirth(member.getBirth().substring(0, 10));
+		model.addAttribute("member", member);
+		
+		return "mypage/changeInform";
+	}
+	
+	@RequestMapping("change_pass")
+	public String changePass(HttpSession session, Model model) {
+		MemberVO member = (MemberVO)session.getAttribute("loginUser");
+		
+		member.setBirth(member.getBirth().substring(0, 10));
+		model.addAttribute("member", member);
+		
+		return "member/findPass";
+	
+	}
+	
+	@RequestMapping("change_info")
+	public String changeInfo(MemberVO vo, Model model) {
+		memberService.updateInform(vo);
+		MemberVO loginUser = memberService.getMember(vo);
+		model.addAttribute("loginUser", loginUser);
+		
+		return "redirect:/mypage";
 	}
 }

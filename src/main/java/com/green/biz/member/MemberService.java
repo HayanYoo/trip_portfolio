@@ -14,4 +14,7 @@ public interface MemberService {
 	
 	public void changePassword(MemberVO vo);
 	
+	public void updateMemberUseyn(MemberVO vo);
+	
+	public void updateInform(MemberVO vo);
 }

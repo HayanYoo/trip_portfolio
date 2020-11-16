@@ -7,7 +7,7 @@
 	<select id = "getMember" resultType="member">
 	<![CDATA[
 	SELECT * FROM member
-	where user_id = #{user_id} and pwd = #{pwd}
+	where user_id = #{user_id} and pwd = #{pwd} and useyn='y'
 	]]>
 	</select>
 	
@@ -36,13 +36,13 @@
 	<!-- 사용자 이름과 이메일을 이용한 아이디 찾기 -->
 	<select id="getMemberByNameAndEmail" resultType="member">
 	select * from member
-	where name = #{name} and email = #{email}
+	where name = #{name} and email = #{email} and useyn='y'
 	</select>
 	
 	<!-- 사용자 아이디와 이름과 이메일을 이용한 비밀번호 찾기 -->
 	<select id="getMemberByIdAndNameAndEmail" resultType="member">
 	select * from member
-	where user_id = #{user_id} and name = #{name} and email = #{email}
+	where user_id = #{user_id} and name = #{name} and email = #{email} and useyn='y'
 	</select>
 	
 	<update id="changePassword">
@@ -55,6 +55,17 @@
 	order by regdate desc
 	</select>
 	
+	<update id="updateMemberUseyn">
+	update member
+	set useyn = 'n'
+	where user_id = #{user_id}
+	</update>
+	
+	<update id="updateInform">
+		update member
+		set name = #{name}, birth = #{birth}, phone = #{phone}, email = #{email}
+		where user_id = #{user_id}
+	</update>
 
 </mapper>
 

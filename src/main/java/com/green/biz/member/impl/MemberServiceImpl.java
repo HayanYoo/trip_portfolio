@@ -44,4 +44,16 @@ public class MemberServiceImpl implements MemberService {
 		member.changePassword(vo);
 	}
 
+	@Override
+	public void updateMemberUseyn(MemberVO vo) {
+		member.updateMemberUseyn(vo);
+		
+	}
+
+	@Override
+	public void updateInform(MemberVO vo) {
+		member.updateInform(vo);
+		
+	}
+
 }

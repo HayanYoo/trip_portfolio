@@ -53,7 +53,7 @@ function idok(){
         <script type="text/javascript">
           opener.document.formm.user_id.value="";
         </script>
-        ${user_id}는 이미 사용중인 아이디입니다.
+        ${user_id}는 사용할 수 없는 아이디입니다.
       </c:if>
       <c:if test="${message==-1}">
         ${user_id}는 사용 가능한 ID입니다.

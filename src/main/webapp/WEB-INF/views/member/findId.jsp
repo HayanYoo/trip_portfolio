@@ -12,9 +12,9 @@
       			<div class="text-center">         
 	         	<span style="font-weight : bold;">${member.name}</span>님이 가입하신 ID는 <span style="font-weight : bold;">${member.user_id}</span>입니다.<br><br><br>
 	         	</div>	    	
-	        <div id="buttons" class="text-center">
-	        		<a href="find_id_pwd"><input type="button" value="비밀번호 찾기" class="submit btn btn-danger login-btn w-50" style="margin-bottom: 10px;"/></a>
-	            <a href="login_form"><input type="button" value="로그인하기" class="submit btn btn-danger login-btn w-50" style="margin-bottom: 10px;"/></a><br>			            			      
+	        <div id="buttons" class="text-center w-200">
+        		<input type="button" value="비밀번호 찾기" class="submit btn btn-danger login-btn w-50" style="margin-bottom: 10px;" onClick="location.href='find_id_pwd'"/>
+            	<input type="button" value="로그인하기" class="submit btn btn-danger login-btn w-50" style="margin-bottom: 10px;" onClick="location.href='login_form'"/><br>			            			      
 	        </div>  
 	        </c:when>
 	        
@@ -22,9 +22,9 @@
 	        <div class="text-center">  
 	        	가입하신 ID가 존재하지 않습니다.<br><br><br> 
 			</div>	    	
-	        <div id="buttons" class="text-center">
-	      	  	<a href="find_id_pwd"><input type="button" value="다시 찾기" class="submit btn btn-danger login-btn w-50" style="margin-bottom: 10px;"/></a>
-	            <a href="contract"><input type="button" value="회원가입" class="submit btn btn-danger login-btn w-50" style="margin-bottom: 10px;"/></a><br>			            			      
+	        <div id="buttons" class="text-center w-200">
+	      	  	<input type="button" value="다시 찾기" class="submit btn btn-danger login-btn w-50" style="margin-bottom: 10px;" onClick="location.href='find_id_pwd'"/>
+	            <input type="button" value="회원가입" class="submit btn btn-danger login-btn w-50" style="margin-bottom: 10px;" onClick="location.href='contract'"/><br>			            			      
 	        </div> 
 	        </c:otherwise> 
         </c:choose>     

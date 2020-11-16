@@ -63,8 +63,9 @@
 				aria-haspopup="true" aria-expanded="false"> MyPage&nbsp; </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="mypage">회원정보</a>
+						<a class="dropdown-item" href="change_inform">회원정보수정</a>  
 						<a class="dropdown-item" href="cart">저장된 일정</a>
-						<a class="dropdown-item" href="withdraw">회원탈퇴</a>    
+						  
 					</div></li>
 				<li class="nav-item"><a class="nav-link" href="qna_list">Q&A&nbsp;&nbsp;&nbsp;</a></li>
 				 <li class="nav-item"><a class="nav-link" href="logout">로그아웃</a></li>

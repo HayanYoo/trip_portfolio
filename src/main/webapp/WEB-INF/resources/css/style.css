@@ -367,6 +367,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	text-align : left;
 	display : block;
 	margin : 0 auto;
-	width : 700px;
+	width : 550px;
 	font-size: 15px;
+}
+
+.mypage-left table tr {
+	height:50px;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+}
+
+.mypage-left table tr th{
+	padding-left:20px;
+	background: #f4f4f4;
+}
+
+.mypage-left table tr td {
+	padding-left:20px;
 }

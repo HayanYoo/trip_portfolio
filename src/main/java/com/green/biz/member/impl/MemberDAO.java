@@ -35,5 +35,12 @@ public class MemberDAO {
 		mybatis.update("MemberDAO.changePassword",vo);
 	}
 	
+	public void updateMemberUseyn(MemberVO vo) {
+		mybatis.update("MemberDAO.updateMemberUseyn", vo);
+	}
+	
+	public void updateInform(MemberVO vo) {
+		mybatis.update("MemberDAO.updateInform", vo);
+	}
 	
 }

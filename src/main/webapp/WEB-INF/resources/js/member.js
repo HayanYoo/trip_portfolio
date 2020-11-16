@@ -108,19 +108,22 @@ function find_id(){
 
 
 function find_pwd(){
-	 if (document.findPwd.user_id.value == "") {
+	
+	 if (document.theForm.user_id.value == "") {
 		alert("아이디를 입력해주세요.");
-		document.findPwd.user_id.focus();
-	}else if(document.findPwd.name.value == "") {
+		document.theForm.user_id.focus();
+	}	
+	else if(document.theForm.name.value == "") {
 		alert("이름을 입력해주세요.");
-		document.findPwd.name.focus();
-	} else if (document.findPwd.email.value == "") {
+		document.theForm.name.focus();
+	} else if (document.theForm.email.value == "") {
 		alert("이메일을 입력해주세요.");
-		document.findPwd.email.focus();
+		document.theForm.email.focus();
 	} else {
-		document.findPwd.action = "find_pwd";
-		document.findPwd.submit();
+		document.theForm.action = "find_pwd";
+		document.theForm.submit();
 	}
+	
 }
 
 function change_pwd() {
@@ -152,11 +155,42 @@ function insert_qna() {
 
 
 function delete_qna() {
-	result = confirm("삭제하시겠습니까?");
+	var result = confirm("삭제하시겠습니까?");
 	
 	if (result){
 		document.frm.action ="delete_qna";
 		document.frm.submit();
 	} 
+}
+
+
+
+function withdraw_confirm() {
+	result = confirm("탈퇴하시겠습니까?");
+	
+	if (result){
+		document.formm.action="withdraw";
+		document.formm.submit();
+	}
+}
+
+
+function change_info() {
+	 if(document.formm.name.value == ""){
+		alert("이름을 입력해 주세요!");
+		document.formm.name.focus();
+	} else if(document.formm.birth.value == ""){
+		alert("생일을 입력해 주세요!");
+		document.formm.birth.focus();
+	} else if(document.formm.phone.value == ""){
+		alert("전화번호를 입력해 주세요!");
+		document.formm.phone.focus();
+	} else if(document.formm.email.value == ""){
+		alert("이메일을 입력해 주세요!");
+		document.formm.email.focus();
+	} else {
+		document.formm.action = "change_info";
+		document.formm.submit();
+	}
 }
 
