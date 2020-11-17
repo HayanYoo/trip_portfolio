@@ -3,7 +3,7 @@
 <%@ include file ="../header.jsp" %>
 <%@ include file ="sub_menu.jsp" %>
 
-
+<form name="frmm">
 <br>
 <div class="detail-center">
 	<div class="row">	
@@ -26,13 +26,15 @@
 			<br><br><br><br>
 		
 			<p>${product.des}</p><br>
-			 <input type="submit" value="담기" class="submit btn btn-danger login-btn" style="margin-right: 5px;">
-			 <input type="button" value="취소" class="btn btn-secondary" onclick="location.href='product_list'">
+			<input type="hidden" name = pageNum value="${criteria.pageNum}"/>
+			<input type="hidden" name = numPerPage value="${criteria.numPerPage}"/>
+			<input type="submit" value="담기" class="submit btn btn-danger login-btn" style="margin-right: 5px;">
+			<input type="button" value="취소" class="btn btn-secondary" onClick="go_list()">
 			
 		</div>
 	</div>
 </div>
-
+</form>
 
 
 

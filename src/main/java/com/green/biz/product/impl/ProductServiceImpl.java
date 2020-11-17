@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.green.biz.product.ProductService;
 import com.green.biz.product.ProductVO;
+import com.green.biz.util.Criteria;
 @Service
 public class ProductServiceImpl implements ProductService {
 	@Autowired
@@ -25,6 +26,16 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public List<ProductVO> listProduct(String name) {
 		return product.listProduct(name);
+	}
+
+	@Override
+	public List<ProductVO> getListProductPaging(String name, Criteria cri) {
+		return product.getListProductPaging(name, cri);
+	}
+
+	@Override
+	public int countProductList(String name) {
+		return product.countProductList(name);
 	}
 
 }

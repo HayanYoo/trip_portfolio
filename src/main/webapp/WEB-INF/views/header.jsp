@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="css/main2.css">
 <link rel="stylesheet" href="css/style.css">
 <script type="text/javascript" src="js/member.js"></script>
-
+<script type="text/javascript" src="js/product.js"></script>
 <title>Trip</title>
 </head>
 <body>

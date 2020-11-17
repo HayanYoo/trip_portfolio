@@ -385,3 +385,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .mypage-left table tr td {
 	padding-left:20px;
 }
+
+
+.pagination {
+	text-align : center;
+	display : block;
+	margin : 0 auto;
+	width : 200px;
+	font-size: 15px;
+	color: black;
+}

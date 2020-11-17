@@ -2,6 +2,8 @@ package com.green.biz.product;
 
 import java.util.List;
 
+import com.green.biz.util.Criteria;
+
 public interface ProductService {
 
 	public List<ProductVO> getBestProductList();
@@ -9,4 +11,8 @@ public interface ProductService {
 	public ProductVO getProduct(ProductVO vo);
 	
 	public List<ProductVO> listProduct(String name);
+	
+	public List<ProductVO> getListProductPaging(String name, Criteria cri);
+	
+	public int countProductList(String name);
 }
