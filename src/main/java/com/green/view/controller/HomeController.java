@@ -1,7 +1,5 @@
 package com.green.view.controller;
 
-
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,17 +7,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.green.biz.condition.ConditionVO;
 import com.green.biz.product.ProductService;
 import com.green.biz.product.ProductVO;
 
-
 /**
  * Handles requests for the application home page.
  */
 @Controller
-
+@SessionAttributes("condition")
 public class HomeController {
 	
 	@Autowired

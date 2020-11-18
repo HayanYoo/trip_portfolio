@@ -1,5 +1,9 @@
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Calendar"%>
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<jsp:useBean id="now" class="java.util.Date" />
 <%@ include file ="../header.jsp" %>
 <hr>
 <%@ include file ="sub_menu.jsp" %>
@@ -41,7 +45,9 @@
 								<img class="media-object img-fluid" src="product_images/${product.image}" alt="${product.name}" >
 							</div>
 							<div class="media-body" style="text-align: left; padding-left: 40px;" >
-								<h5 class="media-heading"><br><br><br>[${product.name}]&nbsp;<span class="badge">New</span></h5>				
+								<h5 class="media-heading"><br><br><br>[${product.name}]&nbsp;	
+								  	
+								</h5>				
 							</div>
 							<div class="media-right" style="width: 233px;">
 							 	<c:choose>

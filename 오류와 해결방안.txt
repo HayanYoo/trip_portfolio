@@ -1,0 +1,28 @@
+-포트폴리오를 작성하면서 생긴 오류와 해결방법
+
+(1) 부서 와 사원 테이블 검증
+	ㄴ 부서테이블의 부서번호의 데이터를 10으로 예를 들고 사원테이블 부서번호 10이 존재할 수 있나? 한번 만 나올수 있나? 여러번 나올 수 있나? 생각해보면서 관계 표현을 그려본다
+	
+	O : 한번도 안나올 수 있다
+	|  : 한번 나온다
+	<  : 여러번 나올수 있다[출처] 데이터 모델링|작성자 Ryana
+
+
+11/11
+회원가입에서 isert 할때 jsp에서 input type="date"로 birth를 입력 한 결과 String으로 값이 입력되어 oracle의 date와의 형식이 맞지 않아 typeMismatch 오류가 발생 
+-> memberVO의 birth를 String 타입으로 바꾸고 sql mapping의  birth에 to_date를 붙여주어 해결
+
+11/12
+검색 조건을 입력하고 값을 넘길때 자꾸 sessionscope값이 0으로 넘어가는 오류를 발견.
+-> 값을 넘길때 button에 단순 href를 걸어주었기 때문에 값을 제대로 넘기지 못함.
+    input type="button"으로 바꾸고 onclick 기능을 통해 함수로 넘겨 submit 처리로 값을 넘겨줌
+
+
+11/17
+1)
+product.js:22 Uncaught TypeError: Cannot set property 'action' of undefined
+ -> function이 form 밖에 있어서 인식을 하지 못해 발생된 오류. form 안으로 넣어주었다.
+
+2)
+자바스크립트 param으로 넣어준 변수값을 controller에서 자꾸 인식하지 못하는 오류 발생.
+-> param을 jsp의 input hidden 으로 저장해두고 controller로 전송해주는 방법으로 오류 해결

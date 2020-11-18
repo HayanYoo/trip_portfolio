@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ScheduleDAO">
+
+<insert id="insertSelected">
+	insert into selected (pseq, user_id) values ( #{pseq}, #{user_id})
+</insert>
+
+<insert id="insertRandom">
+	insert into random values(#{sseq}, #{pseq}, #{user_id})
+</insert>
+
+<select id="selectSelected" resultType="selected">
+	select * from selected
+	where user_id = #{user_id}
+</select>
+
+</mapper>

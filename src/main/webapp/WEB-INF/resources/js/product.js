@@ -23,3 +23,7 @@ function go_list() {
 }
 
  
+function insert_product() {
+	document.frmm.action = "insert_product";
+	document.frmm.submit();
+}

@@ -9,6 +9,8 @@
 		<typeAlias type="com.green.biz.product.ProductVO" alias="product" />
 		<typeAlias type="com.green.biz.member.MemberVO" alias="member" />
 		<typeAlias type="com.green.biz.qna.QnaVO" alias="qna"/>
+		<typeAlias type="com.green.biz.schedule.SelectedVO" alias="selected"/>
+		<typeAlias type="com.green.biz.schedule.RandomVO" alias="random"/>
 	</typeAliases>
 
 
@@ -16,6 +18,7 @@
 		<mapper resource="mappings/product-mapping.xml" />
 		<mapper resource="mappings/member-mapping.xml" />
 		<mapper resource="mappings/qna-mapping.xml"/>
+		<mapper resource="mappings/schedule-mapping.xml"/>
 	</mappers>
 
 </configuration>

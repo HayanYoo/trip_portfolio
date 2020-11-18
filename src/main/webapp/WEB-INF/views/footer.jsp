@@ -1,21 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
   pageEncoding="UTF-8"%>
-  <div class="clear"></div>
- <!-- 
-  <footer>  
-    <hr>
-    <img src="images/logo.png">
-    <div id="copy">
-     All contents Copyright 2020 Travel Inc. all rights reserved<br>
-     Contact mail : Travel@Travel.com Tel: +82 64 123 4315 
-     Fax +82 64 123 4321
-    </div>         
-  </footer>
--->
-
-
+  <br>
+<div class="clear"></div>
 <footer class="page-footer">
-<hr>
+<hr><br>
     <div class="container-footer">
         <div class="row">
                 <div class="col-lg-6 col-sm-12 footer-desc">
@@ -38,7 +26,6 @@
         <br>
         <div class="footer-copyright text-center">@ 2020 Copyright: MyWebsite.com</div>
     </div>
-
+<br>
 </footer>
-</body>
-</html>
+
