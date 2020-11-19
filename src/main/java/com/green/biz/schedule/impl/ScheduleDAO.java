@@ -31,4 +31,9 @@ public class ScheduleDAO {
 	public List<SelectedVO> selectSelected(String user_id) {
 		return mybatis.selectList("ScheduleDAO.selectSelected", user_id);
 	}
+	
+	public void delete_selected(SelectedVO vo) {
+		mybatis.delete("ScheduleDAO.delete_selected", vo);
+		
+	}
 }

@@ -2,21 +2,6 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="header.jsp"%>
 
-<!-- 
-<div class="container-fluid">
-	<div class="jumbotron jumbotron-fluid">
-		<h1 class="text-center">랜덤여행을 소개합니다</h1>
-		<p class="mt-2 text-center">랜덤여행은 일정 짜기 귀찮은 사람들을 위해 여행일정을 랜덤으로 짜주는
-			사이트입니다.</p>
-		<p class="mt-5 text-center">
-			<a class="btn btn-primary btn-lg" href="#" role="button">일정 짜러 가기</a>
-		</p>
-	</div>
-</div>
- -->
-
-
-
 <div id="carouselExampleIndicators" class="carousel slide"
 	data-ride="carousel">
 	<ol class="carousel-indicators">
@@ -68,7 +53,7 @@
 		<input id = "rcorners" type="text" name="maxoption" placeholder="최대 여행 옵션 수" /><br>
 		<input type="button" id = "rcorners2" class="submit"  onclick="addoption()" value="특정옵션추가"/>
 		</p>
-		<button class="search_btn btn btn-primary text-center" type="submit">검색</button>
+		<button class="search_btn btn btn-primary text-center" type="submit" onclick="make_trip()">검색</button>
 		
 	</div>
 	</div>

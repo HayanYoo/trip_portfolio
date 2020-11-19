@@ -33,4 +33,10 @@ public class ScheduleServiceImpl implements ScheduleService {
 		return schedule.selectSelected(user_id);
 	}
 
+	@Override
+	public void delete_selected(SelectedVO vo) {
+		schedule.delete_selected(vo);
+		
+	}
+
 }

@@ -34,8 +34,8 @@ public class ProductController {
 	@RequestMapping(value="product_detail")
 	public String productDetailView(ProductVO vo, Criteria cri, HttpSession session, Model model) {
 		ConditionVO condition = (ConditionVO)session.getAttribute("condition");
-		System.out.println("detail의 조건 : " + condition);
-		vo = productService.getProduct(vo);
+		
+		vo = productService.getProduct(vo.getPseq());
 		model.addAttribute("product", vo);
 		model.addAttribute("criteria", cri);
 		model.addAttribute("condition" ,condition);
@@ -75,7 +75,7 @@ public class ProductController {
 			for (SelectedVO selected : selectedList) {
 				ProductVO vo = new ProductVO();
 				vo.setPseq(selected.getPseq());
-				selectedProduct.add(productService.getProduct(vo));		
+				selectedProduct.add(productService.getProduct(vo.getPseq()));		
 			}
 			
 			model.addAttribute("selectedProduct", selectedProduct);
@@ -85,7 +85,7 @@ public class ProductController {
 		model.addAttribute("productListSize", prodCount);
 		model.addAttribute("pageMaker", pageMaker);
 		model.addAttribute("condition" ,condition);
-		System.out.println("List의 조건 : " + condition);
+		
 		
 		return "product/product_list";
 		

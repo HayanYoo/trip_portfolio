@@ -9,5 +9,7 @@ public interface ScheduleService {
 	void insertRandom(RandomVO vo);
 	
 	public List<SelectedVO> selectSelected(String user_id);
+	
+	public void delete_selected(SelectedVO vo);
 
 }

@@ -7,6 +7,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.green.biz.condition.ConditionVO;
 import com.green.biz.product.ProductVO;
 import com.green.biz.util.Criteria;
 
@@ -20,8 +21,8 @@ public class ProductDAO  {
 		return mybatis.selectList("ProductDAO.getBestProductList");
 	}
 	
-	public ProductVO getProduct(ProductVO vo) {
-		return mybatis.selectOne("ProductDAO.getProduct", vo);
+	public ProductVO getProduct(int pseq) {
+		return mybatis.selectOne("ProductDAO.getProduct", pseq);
 	}
 	
 	public List<ProductVO> listProduct(String name){
@@ -38,5 +39,13 @@ public class ProductDAO  {
 	
 	public int countProductList(String name) {
 		return mybatis.selectOne("ProductDAO.countProductList", name);
+	}
+	
+	public List<ProductVO> listProductByAddress(String name){
+		return mybatis.selectList("ProductDAO.listProductByAddress", name);
+	}
+	
+	public List<ProductVO> randomProductByNum(ConditionVO condition){
+		return mybatis.selectList("ProductDAO.randomProductByNum", condition);
 	}
 }

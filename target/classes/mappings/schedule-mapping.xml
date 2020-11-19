@@ -15,4 +15,9 @@
 	where user_id = #{user_id}
 </select>
 
+<delete id="delete_selected">
+	delete from selected
+	where pseq=#{pseq} and user_id = #{user_id}
+</delete>
+
 </mapper>

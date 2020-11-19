@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.green.biz.condition.ConditionVO;
 import com.green.biz.product.ProductService;
 import com.green.biz.product.ProductVO;
 import com.green.biz.util.Criteria;
@@ -19,8 +20,8 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public ProductVO getProduct(ProductVO vo) {	
-		return product.getProduct(vo);
+	public ProductVO getProduct(int pseq) {
+		return product.getProduct(pseq);
 	}
 
 	@Override
@@ -36,6 +37,16 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public int countProductList(String name) {
 		return product.countProductList(name);
+	}
+
+	@Override
+	public List<ProductVO> listProductByAddress(String name) {
+		return product.listProductByAddress(name);
+	}
+
+	@Override
+	public List<ProductVO> randomProductByNum(ConditionVO condition) {
+		return product.randomProductByNum(condition);
 	}
 
 }

@@ -46,14 +46,14 @@
       <div style="font-size:10px; margin-top:3px;">
 	      <c:forEach items="${selectedProduct}" var="selected">
 	      	<li style="width:200px;">${selected.name} 
-		      	<button type="button" class="btn size" style="padding:0; border:0;"> 
+		      	<button type="button" class="btn size" style="padding:0; border:0;" onclick="location.href='delete_selected?pseq=${selected.pseq}&user_id=${sessionScope.loginUser.user_id}'"> 
 		      	<span class="badge badge-danger size">x</span>
 				</button>
 			</li>
 	      </c:forEach>
       </div>
      
-      <li style="margin-left:40px;"><button class="search_btn btn btn-primary text-center" type="submit" style=" font-size:10px;">일정짜기</button></li>
+      <li style="margin-left:40px;"><button class="search_btn btn btn-primary text-center" type="submit" style=" font-size:10px;" onclick="make_trip()">일정짜기</button></li>
     </ul>
   </nav>
  </form> 

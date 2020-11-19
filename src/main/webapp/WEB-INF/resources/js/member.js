@@ -68,7 +68,10 @@ function addoption(){
 	} else if(document.formm.enddate.value == ""){
 		alert("여행 종료일을 입력해 주세요!");
 		document.formm.enddate.focus();
-	} else if(document.formm.adult.value == ""){
+	} else if(document.formm.startdate.value > document.formm.enddate.value){
+		alert("여행 시작일 이후 날짜를 입력해주세요");
+		document.formm.enddate.focus();
+	}else if(document.formm.adult.value == ""){
 		alert("성인 인원 수를 주세요!");
 		document.formm.adult.focus();
 	} else if(document.formm.kid.value == ""){
@@ -80,7 +83,7 @@ function addoption(){
 	} else if(document.formm.maxbudget.value == ""){
 		alert("최대 예산액을 입력해 주세요!");
 		document.formm.maxbudget.focus();
-	} else if(document.formm.minoption.value == ""){
+	}  else if(document.formm.minoption.value == ""){
 		alert("최소 옵션 갯수를 입력해 주세요!");
 		document.formm.minoption.focus();
 	} else if(document.formm.maxoption.value == ""){
@@ -88,6 +91,45 @@ function addoption(){
 		document.formm.maxoption.focus();
 	} else {
 		document.formm.action="product_list";
+		document.formm.submit();
+		}
+}
+
+
+
+function make_trip(){
+	if(document.formm.area.value == ""){
+		alert("지역을 입력해 주세요!");
+		document.formm.area.focus();
+	} else if(document.formm.startdate.value == ""){
+		alert("여행 시작일을 입력 해주세요!");
+		document.formm.startdate.focus();
+	} else if(document.formm.enddate.value == ""){
+		alert("여행 종료일을 입력해 주세요!");
+		document.formm.enddate.focus();
+	} else if(document.formm.startdate.value > document.formm.enddate.value){
+		alert("여행 시작일 이후 날짜를 입력해주세요");
+		document.formm.enddate.focus();
+	}else if(document.formm.adult.value == ""){
+		alert("성인 인원 수를 주세요!");
+		document.formm.adult.focus();
+	} else if(document.formm.kid.value == ""){
+		alert("아동 인원 수를 주세요!");
+		document.formm.kid.focus();
+	} else if(document.formm.minbudget.value == ""){
+		alert("최소 예산액을 입력해 주세요!");
+		document.formm.minbudget.focus();
+	} else if(document.formm.maxbudget.value == ""){
+		alert("최대 예산액을 입력해 주세요!");
+		document.formm.maxbudget.focus();
+	}  else if(document.formm.minoption.value == ""){
+		alert("최소 옵션 갯수를 입력해 주세요!");
+		document.formm.minoption.focus();
+	} else if(document.formm.maxoption.value == ""){
+		alert("최대 옵션 갯수를 입력해 주세요!");
+		document.formm.maxoption.focus();
+	} else {
+		document.formm.action="make_trip";
 		document.formm.submit();
 		}
 }
@@ -193,4 +235,6 @@ function change_info() {
 		document.formm.submit();
 	}
 }
+
+
 
