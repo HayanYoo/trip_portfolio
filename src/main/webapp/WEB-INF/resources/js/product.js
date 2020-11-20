@@ -27,3 +27,13 @@ function insert_product() {
 	document.frmm.action = "insert_product";
 	document.frmm.submit();
 }
+
+function delete_selected() {
+	document.formm.action = "delete_selected";
+	document.formm.submit();
+}
+
+function make_trip(){
+	document.formm.action = "make_trip";
+	document.formm.submit();
+}

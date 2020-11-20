@@ -374,10 +374,30 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	color: black;
 }
 
-.size{
+.size {
     padding-top: 2px;
     padding-right: 3px;
     padding-left: 3px;
     padding-bottom: 3px;
     top: -10;	
+}
+
+.make-trip-tr table tr th {
+	border-top: 1px solid #ff979c;
+	border-bottom: 1px solid #ff979c;
+	background-color: #fff2f2;
+	height : 35px;
+	margin: 5px 0;
+	font-size: 14px;
+}
+
+.make-trip-tr span {
+	display: inline-block;
+	padding: 5px 0;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.make-trip-tr img {
+	margin-bottom: 10px;
 }

@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <meta charset="UTF-8">   
 
-<form name="formm" >
+<form name="formm">
 <br>
   <nav id="sub_menu">
     <ul>
@@ -46,7 +46,7 @@
       <div style="font-size:10px; margin-top:3px;">
 	      <c:forEach items="${selectedProduct}" var="selected">
 	      	<li style="width:200px;">${selected.name} 
-		      	<button type="button" class="btn size" style="padding:0; border:0;" onclick="location.href='delete_selected?pseq=${selected.pseq}&user_id=${sessionScope.loginUser.user_id}&page=1'"> 
+		      	<button type="button" class="btn size" style="padding:0; border:0;" onclick="location.href='delete_selected2?pseq=${selected.pseq}&user_id=${sessionScope.loginUser.user_id}'"> 
 		      	<span class="badge badge-danger size">x</span>
 				</button>
 			</li>

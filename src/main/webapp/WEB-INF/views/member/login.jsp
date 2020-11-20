@@ -7,8 +7,8 @@
     <form method="post" action="login" name = "formm">
     
       <div class="login">  			         
-		                <input type="text" class="form-control" placeholder="아이디" name="user_id"><br>   
-		                <input type="password" class="form-control" placeholder="비밀번호" name="pwd"> 
+		                <input type="text" class="form-control" placeholder="아이디" name="user_id" value="three"><br>   
+		                <input type="password" class="form-control" placeholder="비밀번호" name="pwd" value="123"> 
 		                <p style="color: red;" class="text-center">${message}</p>
 		      
 			        <div id="buttons">

@@ -44,9 +44,13 @@
       	  </c:otherwise>
       </c:choose>
       <div style="font-size:10px; margin-top:3px;">
+
+      <input type="hidden" name="user_id" value="${sessionScope.loginUser.user_id}"/>
+ 	  <input type="hidden" name="page" value="2"/>	
 	      <c:forEach items="${selectedProduct}" var="selected">
-	      	<li style="width:200px;">${selected.name} 
-		      	<button type="button" class="btn size" style="padding:0; border:0;" onclick="location.href='delete_selected?pseq=${selected.pseq}&user_id=${sessionScope.loginUser.user_id}&page=1'"> 
+	        <input type="hidden" name="pseq" value="${selected.pseq}"/>
+	      	<li style="width:200px;">${selected.name}    
+		      	<button type="button" class="btn size" style="padding:0; border:0;" onclick="delete_selected()"> 
 		      	<span class="badge badge-danger size">x</span>
 				</button>
 			</li>
@@ -56,4 +60,5 @@
       <li style="margin-left:40px;"><button class="search_btn btn btn-primary text-center" type="submit" style=" font-size:10px;" onclick="make_trip()">일정짜기</button></li>
     </ul>
   </nav>
+
  </form> 
