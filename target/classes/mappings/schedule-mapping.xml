@@ -7,8 +7,13 @@
 </insert>
 
 <insert id="insertRandom">
-	insert into random values(#{sseq}, #{pseq}, #{user_id})
+	insert into random values(#{sseq}, #{pseq}, #{user_id}, #{name}, #{image}, #{aprice}, #{kprice})
 </insert>
+
+<select id="getRandomByUserid" resultType="random">
+	select * from random
+	where user_id = #{user_id}
+</select>
 
 <select id="selectSelected" resultType="selected">
 	select * from selected
@@ -19,5 +24,40 @@
 	delete from selected
 	where pseq=#{pseq} and user_id = #{user_id}
 </delete>
+
+<insert id="saveTrip">
+	insert into temp_trip (user_id, pseq) values (#{user_id}, #{pseq})
+</insert>
+
+<select id="getTempTrip" resultType="temptrip">
+	select * from temp_trip
+	where user_id = #{user_id}
+</select>
+
+<delete id="deleteTempTrip">
+ 	delete from temp_trip
+ 	where user_id = #{user_id}
+</delete>
+ 
+<insert id="insertSchedule">
+	insert into schedule (sseq, user_id, area, startdate, enddate, minbudget, maxbudget, minoption, maxoption, adult, kid)
+	values(sseq_seq.nextval, #{user_id}, #{area}, to_date(#{startdate},'yyyy-MM-dd'),to_date(#{enddate},'yyyy-MM-dd')
+			, #{minbudget}, #{maxbudget}, #{minoption}, #{maxoption}, #{adult}, #{kid} )
+</insert>
+
+<select id="latestSseq" resultType="int">
+	select sseq
+		from (
+		    select rownum, sseq from schedule
+		    order by sseq desc
+	    ) 
+	    where rownum = 1
+</select>
+
+<select id="getAllSchedule" resultType="schedule">
+	select * from schedule
+	where user_id = #{user_id}
+	order by startdate
+</select>
 
 </mapper>

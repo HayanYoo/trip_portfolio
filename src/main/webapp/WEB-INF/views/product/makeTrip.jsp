@@ -15,18 +15,18 @@
 				<th>지역</th>
 				<th>시작/종료</th>
 				<th>예산</th>
-				<th width="15%">옵션 수<span style="color:#ff979c;">(선택)</span></th>
+				<th width="15%">옵션 수</th>
 			</tr>
 			<tr>
 				<td>${condition.area}</td>
 				<td>${condition.startdate}<br>${condition.enddate}</td>
 				<td>${condition.minbudget} ~ ${condition.maxbudget}</td>
-				<td>${condition.minoption} ~ ${condition.maxoption}<span style="color:#ff979c;">${selectedListLength}</span></td>
+				<td>${condition.minoption} ~ ${condition.maxoption}</td>
 			</tr>
 		</table>
 		<table width="100%">
 			<tr><!-- 옵션갯수 3개마다 tr행 추가 -->
-				<c:forEach items="${makeTrip}" var="product">
+				<c:forEach items="${tempProduct}" var="product">
 					<% 
 						if (i%3 == 0) {
 							out.print("<tr>");				
@@ -37,7 +37,7 @@
 						}
 					%>	
 					<td width="33%"><span>${product.name}</span><br>
-					<img class="img-fluid" style="width:180px; height:130px;" src="product_images/${product.image}"/></td>				
+					<img class="img-fluid" style="width:180px; height:130px;" src="product_images/${product.image}"/></td>			
 					<% i++; %>
 				</c:forEach>
 			<tr>
@@ -47,7 +47,7 @@
 				<th>총합 : <fmt:formatNumber value="${selectedTotalPrice}" type="number" maxFractionDigits="3"></fmt:formatNumber> 원</th>
 			</tr>
 		</table><br>
-		
+
 		<input type="hidden" name="area" value="${condition.area}"/>
 		<input type="hidden" name="startdate" value="${condition.startdate}"/>
 		<input type="hidden" name="enddate" value="${condition.enddate}"/>
@@ -59,7 +59,7 @@
 		<input type="hidden" name="maxoption" value="${condition.maxoption}"/>
 				
 		<input type="button" value="재검색" class="submit btn btn-secondary login-btn w-30" style="margin-bottom: 10px;" onClick="make_trip()"/>
-		<input type="button" value="저장" class="submit btn btn-danger login-btn w-30" style="margin-bottom: 10px;" onClick="#"/><br>	
+		<input type="button" value="저장" class="submit btn btn-danger login-btn w-30" style="margin-bottom: 10px;" onClick="make_schedule()"/><br>	
 	
 	<br>
 	</div>

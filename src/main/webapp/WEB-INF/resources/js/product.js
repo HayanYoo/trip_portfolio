@@ -37,3 +37,13 @@ function make_trip(){
 	document.formm.action = "make_trip";
 	document.formm.submit();
 }
+
+
+function make_schedule(){
+	document.formm.action = "make_schedule";
+	document.formm.submit();
+}
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}

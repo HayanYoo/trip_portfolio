@@ -11,6 +11,8 @@
 		<typeAlias type="com.green.biz.qna.QnaVO" alias="qna"/>
 		<typeAlias type="com.green.biz.schedule.SelectedVO" alias="selected"/>
 		<typeAlias type="com.green.biz.schedule.RandomVO" alias="random"/>
+		<typeAlias type="com.green.biz.schedule.TempTripVO" alias="temptrip"/>
+		<typeAlias type="com.green.biz.schedule.ScheduleVO" alias="schedule"/>
 	</typeAliases>
 
 

@@ -401,3 +401,24 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .make-trip-tr img {
 	margin-bottom: 10px;
 }
+
+
+.save-trip-tr table tr th {
+	border-top: 1px solid #ff979c;
+	border-bottom: 1px solid #ff979c;
+	background-color: #fff2f2;
+	height : 50px;
+	margin: 10px 0;
+	font-size: 16px;
+}
+
+.save-trip-tr span {
+	display: inline-block;
+	padding: 10px 0;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.save-trip-tr img {
+	margin-bottom: 20px;
+}
