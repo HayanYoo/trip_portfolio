@@ -85,6 +85,7 @@ public class ProductController {
 		model.addAttribute("productListSize", prodCount);
 		model.addAttribute("pageMaker", pageMaker);
 		model.addAttribute("condition" ,condition);
+		model.addAttribute("key", key);
 		
 		
 		return "product/product_list";

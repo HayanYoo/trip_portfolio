@@ -7,7 +7,7 @@
 </insert>
 
 <insert id="insertRandom">
-	insert into random values(#{sseq}, #{pseq}, #{user_id}, #{name}, #{image}, #{aprice}, #{kprice})
+	insert into random values(#{sseq}, #{pseq}, #{user_id}, #{name}, #{image}, #{aprice}, #{kprice}, #{address}, #{des})
 </insert>
 
 <select id="getRandomByUserid" resultType="random">
@@ -55,9 +55,20 @@
 </select>
 
 <select id="getAllSchedule" resultType="schedule">
-	select * from schedule
+<![CDATA[
+	select sseq, user_id, area, startdate, enddate, minbudget, maxbudget, minoption, maxoption, adult, kid from schedule
 	where user_id = #{user_id}
 	order by startdate
+]]>
 </select>
 
+<delete id="deleteRandom">
+	delete from random
+	where sseq = #{sseq}
+</delete>
+
+<delete id="deleteSchedule">
+	delete from schedule
+	where sseq = #{sseq}
+</delete>
 </mapper>

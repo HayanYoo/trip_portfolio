@@ -1,5 +1,8 @@
 package com.green.view.controller;
 
+import java.io.File;
+import java.io.IOException;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.green.biz.member.MemberService;
 import com.green.biz.member.MemberVO;
@@ -86,7 +90,25 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value="join")
-	public String joinAction(MemberVO vo) {
+	public String joinAction(@RequestParam(value ="member_image") MultipartFile uploadFile, MemberVO vo, HttpSession session) {
+		
+		String fileName= "";
+		if (!uploadFile.isEmpty()) {	// 상품 이미지가 업로드 됨
+				// 업로드할 파일 경로를 탐색
+			String root_path = session.getServletContext().getRealPath("WEB-INF/resources/members/");
+			
+			fileName = uploadFile.getOriginalFilename();
+			
+			File file = new File(root_path + fileName);
+			
+			try {
+				uploadFile.transferTo(file);
+			} catch (IllegalStateException | IOException e) {
+				e.printStackTrace();
+			}
+		}
+		vo.setImage(fileName);
+		
 		memberService.insertMember(vo);
 		return "redirect:/index";
 	}
@@ -171,7 +193,25 @@ public class MemberController {
 	}
 	
 	@RequestMapping("change_info")
-	public String changeInfo(MemberVO vo, Model model) {
+	public String changeInfo(@RequestParam(value ="member_image") MultipartFile uploadFile, MemberVO vo,  HttpSession session, Model model ) {
+		
+		String fileName= "";
+		if (!uploadFile.isEmpty()) {	// 상품 이미지가 업로드 됨
+				// 업로드할 파일 경로를 탐색
+			String root_path = session.getServletContext().getRealPath("WEB-INF/resources/members/");
+			
+			fileName = uploadFile.getOriginalFilename();
+			
+			File file = new File(root_path + fileName);
+			
+			try {
+				uploadFile.transferTo(file);
+			} catch (IllegalStateException | IOException e) {
+				e.printStackTrace();
+			}
+		}
+		vo.setImage(fileName);
+		
 		memberService.updateInform(vo);
 		MemberVO loginUser = memberService.getMember(vo);
 		model.addAttribute("loginUser", loginUser);

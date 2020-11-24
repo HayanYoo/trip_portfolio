@@ -1,13 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file ="../header.jsp" %>
+
+<div class="nav-center"><br>
 <%@ include file ="sub_menu.jsp" %>
 
-<form name="formm">
+<form method="post" name="formm" enctype="multipart/form-data">
 	<div class="mypage-left">
-		<br><br><h3 class="text-center">My Page</h3>
+		<br><h3 class="text-center">My Page</h3>
 		<br><br>
 		<table>
+			<tr>
+				<th>프로필사진</th>			
+				<td><input type="file" name="member_image" value="${member.image}"/></td>
+			</tr>
 			<tr>
 				<th style="width:130px;">이름</th>
 				<td style="width:450px;"><input type="text" name = "name" value="${member.name}"/></td>
@@ -40,4 +46,5 @@
 	</div>
 </form>
 <br><br><br>
+</div>
 <%@ include file ="../footer.jsp" %>

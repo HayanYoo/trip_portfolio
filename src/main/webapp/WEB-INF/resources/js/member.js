@@ -52,6 +52,7 @@ function go_save(){
 		alert("이메일을 입력해 주세요!");
 		document.formm.email.focus();
 	} else {
+		document.formm.encoding = "multipart/form-data";
 		document.formm.action = "join";
 		document.formm.submit();
 	}
@@ -231,6 +232,8 @@ function change_info() {
 		alert("이메일을 입력해 주세요!");
 		document.formm.email.focus();
 	} else {
+		
+		document.formm.encoding = "multipart/form-data";
 		document.formm.action = "change_info";
 		document.formm.submit();
 	}

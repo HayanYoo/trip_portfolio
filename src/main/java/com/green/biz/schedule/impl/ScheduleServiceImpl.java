@@ -79,4 +79,14 @@ public class ScheduleServiceImpl implements ScheduleService {
 		return schedule.getRandomByUserid(user_id);
 	}
 
+	@Override
+	public void deleteRandom(int sseq) {
+		schedule.deleteRandom(sseq);	
+	}
+
+	@Override
+	public void deleteSchedule(int sseq) {
+		schedule.deleteSchedule(sseq);
+	}
+
 }

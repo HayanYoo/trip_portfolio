@@ -55,7 +55,7 @@ public class ScheduleController {
 		}	
 	}
 	
-	// page와 condition 값을 못받는 오류를 해결할 것! -> condition을 통째로 넘겨주는것이 아닌 멤버변수들을 하나하나 지정해줘야함
+	// 선택했던 옵션을 삭제하는 기능
 	@RequestMapping(value="delete_selected")
 	public String deleteSelectedAction(@RequestParam(value="page") String page , SelectedVO vo, ConditionVO condition, Model model) {
 		scheduleService.deleteSelected(vo);	
@@ -188,7 +188,7 @@ public class ScheduleController {
 			schedule.setUser_id(loginUser.getUser_id());
 			scheduleService.insertSchedule(schedule);	// schedule테이블에 저장
 			List<TempTripVO> tempTrip = scheduleService.getTempTrip(loginUser.getUser_id());	// temptrip 불러오기
-			System.out.println(random);
+
 			// 가장 최근 sseq에 temptrip 저장
 			random.setSseq(scheduleService.latestSseq());
 			
@@ -200,6 +200,8 @@ public class ScheduleController {
 				random.setName(product.getName());
 				random.setAprice(product.getAprice());
 				random.setKprice(product.getKprice());
+				random.setAddress(product.getAddress());
+				random.setDes(product.getDes());
 				
 				scheduleService.insertRandom(random);
 			}
@@ -212,7 +214,7 @@ public class ScheduleController {
 						
 			model.addAttribute("randomList", randomList);
 			model.addAttribute("scheduleList", scheduleList);
-			return "product/saveTrip";
+			return "mypage/saveTrip";
 		}
 	}
 	
@@ -231,8 +233,20 @@ public class ScheduleController {
 					
 		model.addAttribute("randomList", randomList);
 		model.addAttribute("scheduleList", scheduleList);
-		return "product/saveTrip";
+		return "mypage/saveTrip";
 		}
+	}
+	
+	
+	@RequestMapping("delete_schedule")
+	public String deleteSchedule(@RequestParam(value="sseq") int sseq) {
+		// Random테이블의 해당sseq에 저장되어있는 product 삭제
+		scheduleService.deleteRandom(sseq);
+
+		// Schedule테이블의 해당sseq에 저장되어있는 product 삭제	
+		scheduleService.deleteSchedule(sseq);
+		
+		return "redirect:/cart";
 	}
 	
 }

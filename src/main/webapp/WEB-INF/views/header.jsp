@@ -21,9 +21,10 @@
 <title>Trip</title>
 </head>
 <body>
+<div class="nav-center">
 <div class="nav-container">
 	<nav class=" navbar navbar-expand-lg navbar-light navbar-default">
-		<a class="navbar-brand" href="index" ><img src="images/logo.png"     style="padding-left: 100px;"></a>
+		<a class="navbar-brand" href="index" ><img src="images/logo.png" ></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -33,31 +34,31 @@
 
 		<div class="collapse navbar-collapse " id="navbarSupportedContent" >
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="index">Home
+				<li class="nav-item active"><a class="nav-link" href="index">Home&nbsp;&nbsp;
 						<span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item"><a class="nav-link" href="product_list">Activity</a></li>
-				<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Action</a> <a
-							class="dropdown-item" href="#">Another action</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Something else here</a>
-					</div></li>
 				<li class="nav-item"><a class="nav-link disabled disabled_cor"
-					href="#" tabindex="-1" aria-disabled="true" style="color: white;">DisabledAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</a>
+					href="#" tabindex="-1" aria-disabled="true" style="color: white;">DisabledAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
 				</li>
 
-				
-				 <c:choose>
+				<c:choose>
       			 <c:when test="${empty sessionScope.loginUser}">
 				<li class="nav-item"><a class="nav-link" href="login_form">로그인&nbsp;&nbsp;&nbsp; </a></li>
 				<li class="nav-item"><a class="nav-link" href="contract">회원가입&nbsp;&nbsp;&nbsp;</a></li>
 				<li class="nav-item"><a class="nav-link" href="qna_list">고객센터</a></li>
 				</c:when>
 				<c:otherwise>
-				<li class="nav-item"><a class="nav-link"> ${sessionScope.loginUser.name}님(${sessionScope.loginUser.user_id}) </a></li>					
+				<c:choose>
+					<c:when test="${!empty sessionScope.loginUser.image}">
+						<img src="members/${sessionScope.loginUser.image}" class="img-fluid" style="width:40px; height:40px; border-radius: 50%;"/>
+					</c:when>
+					<c:otherwise>
+						<img src="members/no_image.png" class="img-fluid" style="width:40px; height:40px; border-radius: 50%;"/>
+					</c:otherwise>
+				</c:choose>&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link">
+				 ${sessionScope.loginUser.name}님 </a></li>					
 				<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
 				aria-haspopup="true" aria-expanded="false"> MyPage&nbsp; </a>
@@ -71,11 +72,12 @@
 				 <li class="nav-item"><a class="nav-link" href="logout">로그아웃</a></li>
 				</c:otherwise>
 				</c:choose>
+			
 			</ul>
 		</div>
 	</nav>
 </div>
-
+</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
 		crossorigin="anonymous"></script>

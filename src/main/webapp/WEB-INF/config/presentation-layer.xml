@@ -16,7 +16,7 @@
 	<mvc:resources location="/WEB-INF/resources/js/" mapping="/js/**"/>
 	<mvc:resources location="/WEB-INF/resources/images/" mapping="/images/**"/>
 	<mvc:resources location="/WEB-INF/resources/product_images/" mapping="/product_images/**"/>
-	<mvc:resources location="/WEB-INF/views/admin" mapping="/admin/**"/>
+	<mvc:resources location="/WEB-INF/resources/members/" mapping="/members/**"/>
 	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/"></property>

@@ -12,5 +12,7 @@ public class RandomVO {
 	private int totalprice;
 	private int aprice;
 	private int kprice;
+	private String address;
+	private String des;
 
 }

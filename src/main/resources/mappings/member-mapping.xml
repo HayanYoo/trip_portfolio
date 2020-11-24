@@ -22,8 +22,8 @@
 	<insert id="insertMember">
 	<![CDATA[
 	INSERT INTO MEMBER
-	(user_id, pwd, name, birth, email, phone)
-	values(#{user_id}, #{pwd}, #{name}, to_date(#{birth}, 'yyyy-MM-dd'), #{email}, #{phone})
+	(user_id, pwd, name, birth, email, phone, image)
+	values(#{user_id}, #{pwd}, #{name}, to_date(#{birth}, 'yyyy-MM-dd'), #{email}, #{phone}, #{image})
 	]]>
 	</insert>
 	
@@ -63,7 +63,7 @@
 	
 	<update id="updateInform">
 		update member
-		set name = #{name}, birth = #{birth}, phone = #{phone}, email = #{email}
+		set name = #{name}, birth = #{birth}, phone = #{phone}, email = #{email}, image = #{image}
 		where user_id = #{user_id}
 	</update>
 

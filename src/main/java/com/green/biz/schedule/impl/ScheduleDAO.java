@@ -66,4 +66,12 @@ public class ScheduleDAO {
 	public List<RandomVO> getRandomByUserid(String user_id){
 		return mybatis.selectList("ScheduleDAO.getRandomByUserid", user_id);
 	}
+	
+	public void deleteRandom(int sseq) {
+		mybatis.delete("ScheduleDAO.deleteRandom", sseq);
+	}
+	
+	public void deleteSchedule(int sseq) {
+		mybatis.delete("ScheduleDAO.deleteSchedule", sseq);
+	}
 } 

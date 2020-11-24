@@ -422,3 +422,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .save-trip-tr img {
 	margin-bottom: 20px;
 }
+
+.nav-center {
+	text-align : center;
+	display : block;
+	margin : 0 auto;
+	width : 1300px;
+	font-size: 15px;
+}
+

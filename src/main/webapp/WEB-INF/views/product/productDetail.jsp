@@ -4,7 +4,7 @@
 
 
 <form name="frmm">
-<br>
+<br><br><br>
 <div class="detail-center">
 	<div class="row">	
 		<div class="col-6">
@@ -22,8 +22,8 @@
 				<c:otherwise>
 					<p><span class="price" style="color : #ff4a52;">성인 ${product.aprice}, 아동  ${product.kprice }</span></p>
 				</c:otherwise>
-				
 			</c:choose>
+			
 			<p class="address">${product.address}</p>
 			<br><br><br><br>
 		

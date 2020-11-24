@@ -25,5 +25,10 @@ public interface ScheduleService {
 	public List<ScheduleVO> getAllSchedule(String user_id);
 	
 	public List<RandomVO> getRandomByUserid(String user_id);
+	
+	public void deleteRandom(int sseq);
+	
+	public void deleteSchedule(int sseq);
+	
 
 }

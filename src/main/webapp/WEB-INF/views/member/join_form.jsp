@@ -6,11 +6,13 @@
 
 <br><br><br>
    <h3 class="join-title">JOIN</h3><br><br><br>
-    <form id="join" action="join" method="post" name="formm">
+    <form id="join" action="join" method="post" name="formm" enctype="multipart/form-data">
    <div class="join-form"> 
         <h4>회원정보</h4><br>
         <hr><Br>
-         <label class="col-2">이름</label>
+        <label class="col-2">프로필사진</label>
+        <input type="file" name="member_image"><br>
+        <label class="col-2">이름</label>
         <input type="text"      name="name" size="10"><br> 
         <label class="col-2">아이디</label>
         <input type="text"      name="user_id">

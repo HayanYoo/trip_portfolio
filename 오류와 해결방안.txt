@@ -33,5 +33,11 @@ ex) rownum <=3 O, rownum >3 X, rownum = 3 X
 -> mapping파일에서 order by dbms_random.random 로 랜덤 정렬해준 뒤 3개 뽑는것으로 해결.
 
 11/20
-sub_menu_trip에서 page와 condition 값을 못받는 오류를 해결할 것! 
--> condition을 통째로 넘겨주는것이 아닌 멤버변수들을(ex. area, kind등) 하나하나 model로 지정해줘야함: 모든 오류는 내 코드에 있다
+page와 condition 값을 못받는 오류를 해결할 것!
+ -> condition을 통째로 넘겨주는것이 아닌 멤버변수들(area, price등)을 하나하나 지정해줘야함
+
+11/24
+org.springframework.web.multipart.commons.CommonsMultipartFile 사진 업로드의 타입미스매치
+file로 받아오는 value(name="image") 값이랑 memberVO의 변수값(image)이랑 이름이 같아서 생김
+memberVO의 image는 String type인데 변수값이 같아서 file image가 String image로 들어가서 생긴 오류
+ - > file name을 image에서 member_image로 바꿔주어서 해결!

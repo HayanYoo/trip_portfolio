@@ -15,7 +15,7 @@
 <table>
   <tr>
   <td width="750" style="text-align : right; border-right: 1px solid gray;">
-     <input type="text" name="key" placeholder="검색어를 입력해주세요" size="40">
+     <input type="text" name="key" placeholder="검색어를 입력해주세요" size="40" value="${key}">
      <input class="btn" type="button" name="btn_search" value="검색" onClick="go_search()"></td>
   <td><input class="btn" type="button" name="btn_total" value="전체보기 " onClick="go_total()">
   </td>
