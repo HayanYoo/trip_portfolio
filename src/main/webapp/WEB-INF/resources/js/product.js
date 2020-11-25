@@ -33,11 +33,6 @@ function delete_selected() {
 	document.formm.submit();
 }
 
-function make_trip(){
-	document.formm.action = "make_trip";
-	document.formm.submit();
-}
-
 
 function make_schedule(){
 	document.formm.action = "make_schedule";

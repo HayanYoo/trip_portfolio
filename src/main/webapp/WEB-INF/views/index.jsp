@@ -53,7 +53,7 @@
 		<input id = "rcorners" type="text" name="maxoption" placeholder="최대 여행 옵션 수"  value="5" /><br>
 		<input type="button" id = "rcorners2" class="submit"  onclick="addoption()" value="특정옵션추가"/>
 		</p>
-		<button class="search_btn btn btn-primary text-center" type="submit" onclick="make_trip()">검색</button>
+		<input type="button"  class="search_btn btn btn-primary text-center"onclick="make_trip()" value="검색">
 		
 	</div>
 	</div>

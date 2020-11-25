@@ -75,22 +75,58 @@ function addoption(){
 	}else if(document.formm.adult.value == ""){
 		alert("성인 인원 수를 주세요!");
 		document.formm.adult.focus();
+	} else if(document.formm.adult.value < 0){
+		alert("0 이상을 입력해주세요!");
+		document.formm.adult.focus();
+	} else if(document.formm.adult.value > 1000){
+		alert("1000 이하를 입력해주세요!");
+		document.formm.adult.focus();
 	} else if(document.formm.kid.value == ""){
 		alert("아동 인원 수를 주세요!");
+		document.formm.kid.focus();
+	} else if(document.formm.kid.value < 0){
+		alert("0 이상을 입력해주세요!");
+		document.formm.kid.focus();
+	}else if(document.formm.kid.value > 1000){
+		alert("1000 이하를 입력해주세요!");
 		document.formm.kid.focus();
 	} else if(document.formm.minbudget.value == ""){
 		alert("최소 예산액을 입력해 주세요!");
 		document.formm.minbudget.focus();
+	}  else if(document.formm.minbudget.value < 0){
+		alert("0 이상을 입력해주세요!");
+		document.formm.minbudget.focus();
+	} else if(document.formm.minbudget.value > 10000000){
+		alert("10000000 이하를 입력해주세요!");
+		document.formm.minbudget.focus();
 	} else if(document.formm.maxbudget.value == ""){
 		alert("최대 예산액을 입력해 주세요!");
 		document.formm.maxbudget.focus();
-	}  else if(document.formm.minoption.value == ""){
+	}  else if(document.formm.maxbudget.value < 0){
+		alert("0 이상을 입력해주세요!");
+		document.formm.maxbudget.focus();
+	} else if(document.formm.maxbudget.value > 10000000){
+		alert("10000000 이하를 입력해주세요!");
+		document.formm.maxbudget.focus();
+	}else if(document.formm.minoption.value == ""){
 		alert("최소 옵션 갯수를 입력해 주세요!");
 		document.formm.minoption.focus();
-	} else if(document.formm.maxoption.value == ""){
+	} else if(document.formm.minoption.value < 0){
+		alert("0 이상을 입력해주세요!");
+		document.formm.minoption.focus();
+	} else if(document.formm.minoption.value > 100){
+		alert("1000 이하를 입력해주세요!");
+		document.formm.minoption.focus();
+	}else if(document.formm.maxoption.value == ""){
 		alert("최대 옵션 갯수를 입력해 주세요!");
 		document.formm.maxoption.focus();
-	} else {
+	} else if(document.formm.maxoption.value < 0){
+		alert("0 이상을 입력해주세요!");
+		document.formm.maxoption.focus();
+	} else if(document.formm.maxoption.value > 100){
+		alert("1000 이하를 입력해주세요!");
+		document.formm.maxoption.focus();
+	}else {
 		document.formm.action="product_list";
 		document.formm.submit();
 		}
@@ -114,20 +150,56 @@ function make_trip(){
 	}else if(document.formm.adult.value == ""){
 		alert("성인 인원 수를 주세요!");
 		document.formm.adult.focus();
+	} else if(document.formm.adult.value < 0){
+		alert("0 이상을 입력해주세요!");
+		document.formm.adult.focus();
+	} else if(document.formm.adult.value > 1000){
+		alert("1000 이하를 입력해주세요!");
+		document.formm.adult.focus();
 	} else if(document.formm.kid.value == ""){
 		alert("아동 인원 수를 주세요!");
+		document.formm.kid.focus();
+	} else if(document.formm.kid.value < 0){
+		alert("0 이상을 입력해주세요!");
+		document.formm.kid.focus();
+	}else if(document.formm.kid.value > 1000){
+		alert("1000 이하를 입력해주세요!");
 		document.formm.kid.focus();
 	} else if(document.formm.minbudget.value == ""){
 		alert("최소 예산액을 입력해 주세요!");
 		document.formm.minbudget.focus();
+	}  else if(document.formm.minbudget.value < 0){
+		alert("0 이상을 입력해주세요!");
+		document.formm.minbudget.focus();
+	} else if(document.formm.minbudget.value > 10000000){
+		alert("10000000 이하를 입력해주세요!");
+		document.formm.minbudget.focus();
 	} else if(document.formm.maxbudget.value == ""){
 		alert("최대 예산액을 입력해 주세요!");
 		document.formm.maxbudget.focus();
-	}  else if(document.formm.minoption.value == ""){
+	}  else if(document.formm.maxbudget.value < 0){
+		alert("0 이상을 입력해주세요!");
+		document.formm.maxbudget.focus();
+	} else if(document.formm.maxbudget.value > 10000000){
+		alert("10000000 이하를 입력해주세요!");
+		document.formm.maxbudget.focus();
+	}else if(document.formm.minoption.value == ""){
 		alert("최소 옵션 갯수를 입력해 주세요!");
 		document.formm.minoption.focus();
-	} else if(document.formm.maxoption.value == ""){
+	} else if(document.formm.minoption.value < 0){
+		alert("0 이상을 입력해주세요!");
+		document.formm.minoption.focus();
+	} else if(document.formm.minoption.value > 100){
+		alert("1000 이하를 입력해주세요!");
+		document.formm.minoption.focus();
+	}else if(document.formm.maxoption.value == ""){
 		alert("최대 옵션 갯수를 입력해 주세요!");
+		document.formm.maxoption.focus();
+	} else if(document.formm.maxoption.value < 0){
+		alert("0 이상을 입력해주세요!");
+		document.formm.maxoption.focus();
+	} else if(document.formm.maxoption.value > 100){
+		alert("1000 이하를 입력해주세요!");
 		document.formm.maxoption.focus();
 	} else {
 		document.formm.action="make_trip";

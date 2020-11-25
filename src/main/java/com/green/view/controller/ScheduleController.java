@@ -79,6 +79,7 @@ public class ScheduleController {
 		}
 	}
 
+	// 조건에 맞는 여행지를 랜덤으로 만들기
 	@RequestMapping("make_trip")
 	public String makeTripAction( ConditionVO vo, HttpSession session, Model model) {
 		
@@ -103,7 +104,9 @@ public class ScheduleController {
 				int origin_maxoption = vo.getMaxoption();
 	
 				boolean temp = true;
+				int i = 0;
 				while(temp) {
+					
 					// 값 초기화
 					vo.setMinoption(origin_minoption);
 					vo.setMaxoption(origin_maxoption);
@@ -145,6 +148,15 @@ public class ScheduleController {
 							temp = false;
 							break;
 							}
+						}
+					
+						i++;
+						System.out.println(i);
+						// 값을 찾을수 없을 때 무한루프로 빠지는것을 방지하기 위해 검색횟수 설정
+						if (i >5000) {
+							model.addAttribute("condition", vo);
+							model.addAttribute("message", "검색하신 조건의 결과를 찾을 수 없습니다");
+							return "product/makeTrip";
 						}
 					}
 

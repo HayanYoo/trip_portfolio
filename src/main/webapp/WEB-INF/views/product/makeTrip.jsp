@@ -24,6 +24,7 @@
 				<td>${condition.minoption} ~ ${condition.maxoption}</td>
 			</tr>
 		</table>
+		
 		<table width="100%">
 			<tr><!-- 옵션갯수 3개마다 tr행 추가 -->
 				<c:forEach items="${tempProduct}" var="product">
@@ -36,6 +37,7 @@
 							out.print("</tr>");
 						}
 					%>	
+					
 					<td width="33%"><span>${product.name}</span><br>
 					<a class="btn btn-default" data-target="#modal<%=i%>" data-toggle="modal"><img class="img-fluid" style="width:180px; height:130px;" src="product_images/${product.image}"/></a></td>					
 					
@@ -74,7 +76,14 @@
 			<tr>
 				<td style="border-top: 1px solid #ff979c; border-bottom: 1px solid #ff979c;"></td>
 				<td style="border-top: 1px solid #ff979c; border-bottom: 1px solid #ff979c;"></td>
-				<th>총합 : <fmt:formatNumber value="${selectedTotalPrice}" type="number" maxFractionDigits="3"></fmt:formatNumber> 원</th>
+				<c:choose>
+					<c:when test="${empty message}">
+						<th>총합 : <fmt:formatNumber value="${selectedTotalPrice}" type="number" maxFractionDigits="3"></fmt:formatNumber> 원</th>
+					</c:when>
+					<c:otherwise>
+					<th style="height:60px;">${message}</th>
+					</c:otherwise>
+				</c:choose>
 			</tr>
 		</table><br>
 
