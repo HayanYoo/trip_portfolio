@@ -175,15 +175,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .detail-center {
-	text-align : left;
+	text-align : center;
 	display : block;
 	margin : 0 auto;
-	width : 1100px;
+	width : 900px;
 	font-size: 15px;
 }
 
 .detail-center img {
-	height: 400px;
+	width: 700px;
+	height: 500px;
 }
 .detail-center h4{
     padding-top: 1px;
@@ -196,23 +197,25 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	font-weight: 600;
 }
 
+.detail-price{
+	font-size: 27px;
+	font-weight: 600;
+}
+
 .detail-center .login-btn{
 	width : 80px;
 }
 .address {
-	font-size: 13px;
+	font-size: 18px;
 	font-weight: 500;
 }
 
-}
 .parea {
-	color : red;
-	font-size: 13px;
-	font-weight: 500;
+	padding-bottom:10px;
+	color:#b0b0b0;
+	font-size: 17px;
+	font-weight: 700;
 }
-
-
-
 
 
 #sub_menu {
@@ -428,6 +431,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	display : block;
 	margin : 0 auto;
 	width : 1300px;
+	font-size: 15px;
+}
+
+.map-center {
+	text-align : center;
+	display : block;
+	margin : 0 auto;
+	width : 900px;
 	font-size: 15px;
 }
 

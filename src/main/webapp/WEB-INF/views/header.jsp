@@ -78,6 +78,7 @@
 	</nav>
 </div>
 </div>
+	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a306a72cbfc829546ca6f2859fc5ec96&libraries=services"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
 		crossorigin="anonymous"></script>
