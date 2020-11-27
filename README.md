@@ -4,7 +4,11 @@
 * [프로젝트](#프로젝트)
   * [Built With](#built-with)
 * [사용법](#사용법)
-* [MakeTrip](#MakeTrip)
+  * [MakeTrip](#MakeTrip)
+  * [Activity](#Activity)
+  * [로그인](#로그인)
+  * [마이페이지](#마이페이지)
+  * [Q&A](#Q&A)
 * [Roadmap](#roadmap)
 * [Contact](#contact)
 
@@ -67,7 +71,7 @@
    여행 일정이 마음에 든다면, 저장을 통해 저장된일정에 여행을 저장할 수 있습니다.<br><br>
    
  
-  ><h3>Activity</h3>
+## Activity
   
   
   가고싶은 특정 관광지가 있다면, 상단 우측 Activity 혹은 메인페이지의 일정짜기 버튼 위에 있는 특정옵션추가를 통해 Activity로 들어가 특정 옵션을 추가 한뒤, 일정을 만들 수 있습니다.<br>
@@ -112,7 +116,7 @@
   * 삭제 버튼을 통해 저장된 일정을 삭제할 수 있습니다.
 
 <br><br>
-><h3>로그인</h3>
+## 로그인
    <img src="https://user-images.githubusercontent.com/73471529/100423850-0c24c800-30d0-11eb-8ebc-948533d385b3.png">  
    
      
@@ -168,17 +172,17 @@
   * 아이디가 이미 존재한다면 사용할 수 없습니다.
    
   <br><br><br>
-><h3>마이페이지</h3>
+## 마이페이지
   로그인 후, 우측 상단을 통해 들어갈 수 있습니다.
 <br>
-   <h4>회원정보</h4>
+   ><h3>회원정보</h3>
  <img src="https://user-images.githubusercontent.com/73471529/100428066-c1f31500-30d6-11eb-9c1b-792908b3df85.png">  
    
   * 회원정보를 확인 할 수 있습니다.
   * 탈퇴하기를 누를 경우, 확인 알람창이 뜹니다. 확인을 누르면 탈퇴가 가능합니다.
    
 <br><br><br>
-  <h4>회원정보 수정</h4>
+  ><h3>회원정보 수정</h3>
 <img src="https://user-images.githubusercontent.com/73471529/100428029-b9024380-30d6-11eb-93e8-e5e5ba712351.png">  
    
   * 회원정보를 수정 할 수 있습니다.
@@ -187,23 +191,23 @@
   
   
   <br><br><br>
-  ><h3>Q&A</h3>
+## Q&A
   관리자에게 질문을 할 수 있고 답변을 받을 수 있습니다.
 <br>
-   <h4>질문 목록</h4>
+   ><h3>질문 목록</h3>
    <img src="https://user-images.githubusercontent.com/73471529/100429006-11861080-30d8-11eb-9d04-fe847d0417cf.png">  
    
   * 1:1 질문을 할 수 있습니다.
   * 답변이 완료된 경우 답변완료처리가 됩니다.
   <br><br>
   
-   <h4>1:1 질문하기</h4>
+   ><h3>1:1 질문하기</h3>
    <img src="https://user-images.githubusercontent.com/73471529/100429243-6590f500-30d8-11eb-8ce3-eed63edd8a13.png">  
    
   제목과 내용을 입력하여 질문을 등록할 수 있습니다.
   <br><br><br>
   
-   <h4>질문상세보기</h4>
+   ><h3>질문상세보기</h3>
    <div>
    <img width="45%" src="https://user-images.githubusercontent.com/73471529/100429278-6fb2f380-30d8-11eb-85ed-21c5a7a2f092.png">
    <img width="45%" src="https://user-images.githubusercontent.com/73471529/100429296-79d4f200-30d8-11eb-9fd6-dd50563f9855.png">
