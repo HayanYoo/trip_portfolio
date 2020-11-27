@@ -52,7 +52,6 @@
 					<a class="btn btn-default" data-target="#modal<%=i%>" data-toggle="modal"><img class="img-fluid" style="width:250px; height:200px;" src="product_images/${product.image}"/></a></td>
 					
 					<!-- modal -->
-					<div class="row">
 						<div class="modal" id="modal<%=i%>" tabindex="-1">
 							<div class="modal-dialog">
 								<div class="modal-content">
@@ -61,25 +60,28 @@
 										<button class="close" data-dismiss="modal">&times;</button>
 									</div>
 									<div class = "modal-body" style="text-align:center;">
-									<img src="product_images/${product.image}" class="img-fluid" style="width:400px; height:300px;"><br><br>
-									<span style="font-weight: bold;">주소 : ${product.address }</span><br><br>
-									${product.des}<br>
+										<img src="product_images/${product.image}" class="img-fluid" style="width:400px; height:300px;"><br><br>
 									
-									<c:choose>
-										<c:when test="${product.aprice == 0 && product.kprice ==0}">
-											<p><span class="price" style="color : #ff4a52; font-size:15px;">무료</span></p>
-										</c:when>
-										<c:otherwise>
-											<p><span class="price" style="color : #ff4a52; font-size:15px;">성인 ${product.aprice} &nbsp;&nbsp;/&nbsp; 아동  ${product.kprice }</span></p>
-										</c:otherwise>
-									</c:choose>						
-								</div>
-								<div class="modal-footer">
-								<button class="btn btn-danger" data-dismiss="modal">닫기</button>
-								</div>
-							</div>	
+										<c:choose>
+											<c:when test="${product.aprice == 0 && product.kprice ==0}">
+												<p><span style="color : #ff4a52; font-size:15px;">무료</span></p>
+											</c:when>
+											<c:otherwise>
+												<p><span style="color : #ff4a52; font-size:15px;">성인 ${product.aprice}원 &nbsp;&nbsp;/&nbsp; 아동  ${product.kprice }원</span></p>
+											</c:otherwise>
+										</c:choose>
+									
+										<span style="font-weight: bold; font-size:13px;">주소 : ${product.address }</span><br><br>
+										<span class="modal-des" style="font-weight:400; font-size:12px;">${product.des}</span><br>
+																					
+									</div>
+									<div class="modal-footer">
+									<button class="btn btn-danger" data-dismiss="modal">닫기</button>
+									</div>
+								</div>				
+							</div>
 						</div>
-					</div>		
+					<!-- 모달 종료 -->			
 					<% i++; %>
 					</c:if>	
 				</c:forEach>
