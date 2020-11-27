@@ -83,7 +83,9 @@
 			from
 				(select rownum rn, pseq, name, kind, aprice, kprice, image, useyn, bestyn, regdate, parea, sarea, address 
 					from
-						(select * from product where address like '%' || #{area} || '%' order by dbms_random.random)
+						(select * from product where address like '%' || #{area} || '%' 
+						 and pseq not in (select pseq from selected where user_id =#{user_id})  
+					order by dbms_random.random)
 				) 
 		where rn <= #{maxoption} order by pseq
 	]]>
