@@ -53,7 +53,7 @@
 	      </c:forEach>
       </div>
      
-      <li style="margin-left:40px;"><button class="search_btn btn btn-primary text-center" type="submit" style=" font-size:10px;" onclick="make_trip()">일정짜기</button></li>
+      <li><button class="search_btn btn btn-primary text-center" type="submit" style=" font-size:10px;" onclick="make_trip()">일정짜기</button></li>
     </ul>
   </nav>
  </form> 
