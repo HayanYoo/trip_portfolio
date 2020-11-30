@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
+
+<div class="nav-center"><br><br>
 <%@ include file="sub_menu_make.jsp" %>
 
 
 <form name="frmm">
 	<% int i = 0; %>
-	<br><br>
+	
 	
 	<div class="panel-center make-trip-tr">
 		<h2 style="font-style: italic;">MAKE TRIP!</h2><br>
@@ -105,5 +107,5 @@
 	<br>
 	</div>
 </form>
-
+</div>
 <%@ include file="../footer.jsp"%>
