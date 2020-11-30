@@ -6,15 +6,17 @@
 <jsp:useBean id="now" class="java.util.Date" />
 <%@ include file ="../header.jsp" %>
 <hr>
+<div class="nav-center">
+<br>
 <%@ include file ="sub_menu.jsp" %>
 
-<br>
+
 <div class="product-center">
 <h3>Activity</h3><br><br>
 <form name="frm" method="post">
 <table>
   <tr>
-  <td width="750" style="text-align : right; border-right: 1px solid gray;">
+  <td width="600" style="text-align : right; border-right: 1px solid gray;">
      <input type="text" name="key" placeholder="검색어를 입력해주세요" size="40" value="${key}">
      <input class="btn" type="button" name="btn_search" value="검색" onClick="go_search()"></td>
   <td><input class="btn" type="button" name="btn_total" value="전체보기 " onClick="go_total()">
@@ -71,4 +73,5 @@
 	<%@ include file="page_area.jsp" %> 
 </div>
 <br>
+</div>
 <%@ include file ="../footer.jsp" %>
