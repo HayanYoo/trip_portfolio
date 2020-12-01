@@ -9,7 +9,7 @@
   * [로그인](#로그인)
   * [마이페이지](#마이페이지)
   * [Q&A](#Q&A)
-* [Roadmap](#roadmap)
+* [Modeling](#Modeling)
 * [Contact](#contact)
 
 
@@ -76,7 +76,7 @@
   
   가고싶은 특정 관광지가 있다면, 상단 우측 Activity 혹은 메인페이지의 일정짜기 버튼 위에 있는 특정옵션추가를 통해 Activity로 들어가 특정 옵션을 추가 한뒤, 일정을 만들 수 있습니다.<br>
   <div>
-  <img width="500" src="https://user-images.githubusercontent.com/73471529/100407541-04ebc300-30ac-11eb-8a36-13fb3da2fb4b.png">
+  <img width="450" src="https://user-images.githubusercontent.com/73471529/100407541-04ebc300-30ac-11eb-8a36-13fb3da2fb4b.png">
   <img width="400" src="https://user-images.githubusercontent.com/73471529/100407321-7a0ac880-30ab-11eb-9657-c8dc661c3ed6.png">
   </div>  
      
@@ -131,8 +131,8 @@
   개인정보를 통해 아이디와 비밀번호를 찾을 수 있습니다.<br><br>
   
   <div>
-  <img width="450" src="https://user-images.githubusercontent.com/73471529/100424007-4ee6a000-30d0-11eb-898b-fab53188318c.png">
-  <img width="450" src="https://user-images.githubusercontent.com/73471529/100424376-d9c79a80-30d0-11eb-8775-459424fab097.png">
+  <img width="45%" src="https://user-images.githubusercontent.com/73471529/100424007-4ee6a000-30d0-11eb-898b-fab53188318c.png">
+  <img width="45%" src="https://user-images.githubusercontent.com/73471529/100424376-d9c79a80-30d0-11eb-8775-459424fab097.png">
  </div>  
      
   * 인적사항일 일치할 경우 아이디 찾기시 내 아이디를 확인할 수 있습니다.
@@ -224,10 +224,10 @@
 
 
 
-<!-- ROADMAP -->
-## Roadmap
+<!-- 모델링 -->
+## Modeling
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+<img src ="https://user-images.githubusercontent.com/73471529/100694124-b43cd880-33d1-11eb-8a45-4c3a77034913.png">
 
 
 
